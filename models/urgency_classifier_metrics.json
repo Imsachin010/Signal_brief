@@ -1,0 +1,71 @@
+{
+  "test_accuracy": 1.0,
+  "test_f1_macro": 1.0,
+  "val_accuracy": 1.0,
+  "val_f1_macro": 1.0,
+  "class_report": {
+    "low": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 34.0
+    },
+    "medium": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 33.0
+    },
+    "high": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 33.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 100.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      34,
+      0,
+      0
+    ],
+    [
+      0,
+      33,
+      0
+    ],
+    [
+      0,
+      0,
+      33
+    ]
+  ],
+  "label_map": {
+    "low": 0,
+    "medium": 1,
+    "high": 2
+  },
+  "id2label": {
+    "0": "low",
+    "1": "medium",
+    "2": "high"
+  },
+  "model_type": "TfidfVectorizer + LogisticRegression",
+  "dataset": "data/training/urgency_dataset.csv",
+  "num_train": 800,
+  "num_val": 100,
+  "num_test": 100
+}

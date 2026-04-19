@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+.env
+.env.*
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
+api_key.txt
+uv.lock
+.codex/
+TEST_LOGS.md

@@ -1,0 +1,1001 @@
+text,label,urgency_score,sender_type,sender_tier
+Happy Friday!,low,0.0698,peer,1
+Good morning!,low,0.0391,family,2
+Reminder: performance review cycle starts Monday.,medium,0.566,manager,3
+Your two-factor auth was just used from an unknown location,high,0.747,unknown,0
+"Grocery list: milk, eggs, bread",low,0.0536,family,2
+Netflix just dropped a new show btw,low,0.2365,peer,1
+Your travel reimbursement has been processed.,medium,0.5067,unknown,0
+Final warning: approve the PR or we miss the release window,high,0.8336,peer,1
+deal closing in 30 min - need sign-off or we lose it,high,0.9825,manager,3
+can you review my pr when you get a chance? no rush,medium,0.4946,peer,1
+your leave request has been approved,medium,0.556,unknown,0
+Can you help debug this issue by EOD?,medium,0.5698,peer,1
+Pick up the dry cleaning on your way home.,low,0.0671,family,2
+deadline: submit the report in the next 20 minutes or we lose the contract,high,0.959,manager,3
+Your benefits enrollment closes in 2 days,medium,0.4883,unknown,0
+final warning: approve the pr or we miss the release window,high,0.7423,peer,1
+"Load balancer config change tonight, be aware",medium,0.3903,peer,1
+Are we still on for Friday drinks?,low,0.0483,peer,1
+"Urgent: refund batch job failed, 500 customers affected!",high,0.7863,peer,1
+Lunch plans today?,low,0.0858,peer,1
+"new hire starting monday, please prepare onboarding",medium,0.4231,manager,3
+are we still on for friday drinks?,low,0.2405,peer,1
+can you hop on a quick call sometime today?,medium,0.4389,manager,3
+Please review the proposal before the meeting,medium,0.5523,peer,1
+When are you free for a quick catch-up call?,low,0.0338,peer,1
+Your monthly statement is ready to view,low,0.0827,unknown,0
+"URGENT: Client threatening to pull the contract, need you on call",high,0.9221,manager,3
+"CEO needs the numbers in 10 minutes, send immediately",high,0.825,manager,3
+Don't forget mom's birthday next week.,low,0.0907,family,2
+Your two-factor auth was just used from an unknown location!,high,0.771,unknown,0
+"yo, free this evening?",low,0.2345,peer,1
+your monthly statement is ready to view,low,0.1659,unknown,0
+reminder: dentist appointment thursday 4pm,low,0.0436,unknown,0
+"SLA breach in 20 min if not resolved, client watching",high,0.7699,manager,3
+Your two-factor auth was just used from an unknown location!,high,0.7177,unknown,0
+"Client on the phone, need answer right now",high,0.7613,manager,3
+"urgent: server is down, customers can't login - call now",high,0.86,peer,1
+New blog post from your favourite author.,low,0.1679,unknown,0
+lunch plans today?,low,0.1455,peer,1
+Please update the JIRA ticket with your progress,medium,0.4866,peer,1
+"long weekend next week, any plans?",low,0.1073,peer,1
+"Medical emergency at office, everyone please respond!",high,0.759,unknown,0
+"final: board presentation in 8 minutes, file won't open",high,0.967,manager,3
+"Hey, enjoyed the presentation today.",low,0.3299,peer,1
+"Contract renewal is up for review, need your input",medium,0.54,manager,3
+New company policy: please read and acknowledge.,medium,0.6244,manager,3
+"gas leak reported in the building, exit immediately",high,0.8042,unknown,0
+Reminder: performance review cycle starts Monday,medium,0.4547,manager,3
+Can you cover for me in the standup tomorrow?,medium,0.5041,peer,1
+reminder: gym session at 7am tomorrow,low,0.1193,peer,1
+"Sprint planning tomorrow 10am, please come prepared.",medium,0.4759,manager,3
+Your two-factor auth was just used from an unknown location,high,0.973,unknown,0
+Your subscription renews in 7 days.,low,0.1831,unknown,0
+"Ransomware detected on 3 machines, disconnect from VPN now",high,0.7536,peer,1
+Vendor payment pending your approval,medium,0.4061,manager,3
+Expense report needs to be submitted this week.,medium,0.5515,unknown,0
+ALERT: Unauthorized access attempt on production,high,0.9788,unknown,0
+"Hey, enjoyed the presentation today!",low,0.2668,peer,1
+Reminder: submit your timesheet by EOD Friday,low,0.2672,unknown,0
+When are you free for a quick catch-up call.,low,0.2604,peer,1
+"ambulance called, priya collapsed in office, please come",high,0.7119,peer,1
+ESCALATION: Customer data visible to wrong users - P0!,high,0.7131,manager,3
+please double-check the prod deployment checklist,medium,0.4595,peer,1
+"The staging environment is acting up, can you check?",medium,0.4448,peer,1
+"urgent: investor call in 15 min, deck not loading, fix now",high,0.9711,manager,3
+deal closing in 30 min - need sign-off or we lose it,high,0.9275,manager,3
+Can you share the Q3 report before COB today.,medium,0.3942,manager,3
+"Project update: everything's on track, no blockers.",low,0.1596,peer,1
+"Contract renewal is up for review, need your input",medium,0.4515,manager,3
+Expense report needs to be submitted this week.,medium,0.6156,unknown,0
+"hey, how's the new project going?",low,0.2571,peer,1
+Production is down. Repeat: prod is down. All hands NOW!,high,0.773,peer,1
+Your training course expires in 5 days.,medium,0.3672,unknown,0
+Database corruption detected - halt all writes immediately!,high,0.7778,peer,1
+Your benefits enrollment closes in 2 days.,medium,0.6285,unknown,0
+"Airport: your flight departs in 40 min, proceed to gate",high,0.9166,unknown,0
+"CRITICAL PATH: If you don't merge this in 10 min, release fails",high,0.8444,peer,1
+Your two-factor auth was just used from an unknown location!,high,0.9044,unknown,0
+deployment scheduled for 3pm today - just fyi,medium,0.6518,peer,1
+Netflix just dropped a new show btw.,low,0.1652,peer,1
+happy friday!,low,0.1614,peer,1
+please double-check the prod deployment checklist,medium,0.3883,peer,1
+"hey, are you coming to the party?",low,0.1799,peer,1
+network switch failure - entire floor is offline,high,0.9417,peer,1
+meme incoming 😂,low,0.3037,peer,1
+"hey, what's up?",low,0.1138,peer,1
+"Candidate background check cleared, offer going out",medium,0.4185,manager,3
+Coffee later?,low,0.1178,peer,1
+"SLA breach in 20 min if not resolved, client watching!",high,0.9019,manager,3
+Your order has shipped!,low,0.328,unknown,0
+Expense report needs to be submitted this week,medium,0.4135,unknown,0
+ALERT: Unauthorized access attempt on production!,high,0.7309,unknown,0
+security patch needs to be applied this week,medium,0.4302,peer,1
+Are we still on for Friday drinks?,low,0.2718,peer,1
+"server memory leak crashing every 10 min, need patch now",high,0.9268,peer,1
+did you get my email from yesterday?,low,0.3322,peer,1
+"CRITICAL: Payment gateway failing, losing transactions",high,0.8199,peer,1
+Vendor payment pending your approval,medium,0.6296,manager,3
+"ASAP: Security breach detected, isolate the system!",high,0.7388,peer,1
+Vendor payment pending your approval.,medium,0.5832,manager,3
+"gas leak reported in the building, exit immediately",high,0.9097,unknown,0
+"BREACH: SSH keys exposed in public repo, rotate now!",high,0.7175,peer,1
+"grocery list: milk, eggs, bread",low,0.0842,family,2
+Reminder: performance review cycle starts Monday,medium,0.4512,manager,3
+Production is down. Repeat: prod is down. All hands NOW,high,0.982,peer,1
+Can you cover for me in the standup tomorrow?,medium,0.6746,peer,1
+Your subscription renews in 7 days,low,0.2305,unknown,0
+Reminder: dentist appointment Thursday 4pm.,low,0.2168,unknown,0
+"Gas leak reported in the building, exit immediately!",high,0.8113,unknown,0
+weekly digest: top stories for you,low,0.1086,unknown,0
+Please review the proposal before the meeting,medium,0.5145,peer,1
+"driver: your passenger has left belongings, urgent return",high,0.8388,unknown,0
+Did you get my email from yesterday.,low,0.0898,peer,1
+can you hop on a quick call sometime today?,medium,0.3809,manager,3
+FYI - office is closing early Friday.,low,0.0579,peer,1
+Security patch needs to be applied this week.,medium,0.5497,peer,1
+When are you free for a quick catch-up call.,low,0.1741,peer,1
+"Ambulance called, Priya collapsed in office, please come!",high,0.8506,peer,1
+"power outage in datacenter, backup failing",high,0.9644,peer,1
+No action needed - just a status ping.,low,0.2442,peer,1
+Netflix just dropped a new show btw,low,0.0411,peer,1
+"ceo needs the numbers in 10 minutes, send immediately",high,0.9876,manager,3
+"ASAP: Insurance claim deadline today 5pm, submit now!",high,0.888,unknown,0
+Expense report needs to be submitted this week.,medium,0.6862,unknown,0
+"candidate background check cleared, offer going out",medium,0.3687,manager,3
+your child's school: please call urgently,high,0.7732,unknown,0
+Tip: complete your profile to get more matches.,low,0.0537,unknown,0
+"urgent: wrong data pushed to 10k users, recall now",high,0.7586,peer,1
+"Candidate background check cleared, offer going out",medium,0.5235,manager,3
+Tip: complete your profile to get more matches.,low,0.2222,unknown,0
+Happy Friday.,low,0.1033,peer,1
+your leave request has been approved,medium,0.5813,unknown,0
+Please respond to client's email from yesterday.,medium,0.6452,manager,3
+"Hey, enjoyed the presentation today.",low,0.2665,peer,1
+"call me right now, something went wrong with the release",high,0.8357,manager,3
+your benefits enrollment closes in 2 days,medium,0.6195,unknown,0
+"Candidate background check cleared, offer going out.",medium,0.6284,manager,3
+security patch needs to be applied this week,medium,0.388,peer,1
+API rate limits hit 80% - keep an eye on it.,medium,0.3773,peer,1
+"ASAP: Insurance claim deadline today 5pm, submit now!",high,0.9209,unknown,0
+Did you get my email from yesterday.,low,0.1976,peer,1
+Heads up: client visiting office tomorrow.,medium,0.6612,manager,3
+Your child's school: please call urgently!,high,0.7429,unknown,0
+Mom: beta CALL ME NOW something happened to dad,high,0.7406,family,2
+Team: please fill in the availability form by Thursday.,medium,0.55,manager,3
+"SOS: I'm stuck in traffic, client meeting in 5 min, can you start!",high,0.8759,peer,1
+client exec escalated to our ceo - call me now,high,0.8521,manager,3
+"Yo, free this evening.",low,0.0444,peer,1
+"System alert: CPU at 99% for 15 min, intervention needed",high,0.7779,unknown,0
+"urgent: investor call in 15 min, deck not loading, fix now",high,0.8061,manager,3
+your benefits enrollment closes in 2 days,medium,0.4359,unknown,0
+Please update the JIRA ticket with your progress.,medium,0.662,peer,1
+"project update: everything's on track, no blockers",low,0.0705,peer,1
+meme incoming 😂,low,0.2391,peer,1
+PR review needed before tomorrow's sprint demo.,medium,0.4149,peer,1
+Budget approval needed before EOD TODAY - final reminder,high,0.7598,manager,3
+"Driver: your passenger has left belongings, urgent return!",high,0.9892,unknown,0
+Emergency team call in 5 minutes - mandatory attendance,high,0.8553,manager,3
+Vendor payment pending your approval.,medium,0.6683,manager,3
+Feature flag needs to be enabled before release,medium,0.5336,peer,1
+"Just saw your post on LinkedIn, nice one.",low,0.22,peer,1
+Weekly digest: top stories for you.,low,0.2842,unknown,0
+draft the sow and share for review by tomorrow,medium,0.5673,peer,1
+good morning!,low,0.3467,family,2
+"breach: ssh keys exposed in public repo, rotate now",high,0.7993,peer,1
+"server memory leak crashing every 10 min, need patch now",high,0.8898,peer,1
+Coffee later?,low,0.0832,peer,1
+"Hey, what's up?",low,0.0448,peer,1
+"Ambulance called, Priya collapsed in office, please come!",high,0.9775,peer,1
+Please review the proposal before the meeting.,medium,0.4234,peer,1
+Database corruption detected - halt all writes immediately!,high,0.7719,peer,1
+feature flag needs to be enabled before release,medium,0.665,peer,1
+"ceo needs the numbers in 10 minutes, send immediately",high,0.8296,manager,3
+"Final: board presentation in 8 minutes, file won't open!",high,0.7252,manager,3
+Quarterly goals need to be updated in the system.,medium,0.3744,manager,3
+"standby for oncall this weekend, you're primary",medium,0.6896,manager,3
+emergency team call in 5 minutes - mandatory attendance,high,0.7837,manager,3
+"Medical emergency at office, everyone please respond!",high,0.9186,unknown,0
+how was your weekend?,low,0.2692,peer,1
+Heads up: client visiting office tomorrow,medium,0.6197,manager,3
+team: code freeze is thursday eod,medium,0.409,manager,3
+coffee later?,low,0.1185,peer,1
+budget approval needed before eod today - final reminder,high,0.9358,manager,3
+Roadmap discussion moved to this Thursday,medium,0.4005,manager,3
+no action needed - just a status ping,low,0.072,peer,1
+"load balancer config change tonight, be aware",medium,0.4704,peer,1
+"URGENT: Wrong data pushed to 10k users, recall now",high,0.8775,peer,1
+Your subscription renews in 7 days.,low,0.1094,unknown,0
+please double-check the prod deployment checklist,medium,0.4483,peer,1
+"Contract renewal is up for review, need your input",medium,0.6481,manager,3
+"Airport: your flight departs in 40 min, proceed to gate!",high,0.7156,unknown,0
+FYI I'll be WFH tomorrow.,low,0.2255,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared!",high,0.8355,manager,3
+Netflix just dropped a new show btw,low,0.2022,peer,1
+Your training course expires in 5 days.,medium,0.5108,unknown,0
+Quick question - do you prefer chai or coffee.,low,0.3147,peer,1
+Budget spreadsheet needs your sign-off this week.,medium,0.4767,manager,3
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract!,high,0.7547,manager,3
+"call me right now, something went wrong with the release",high,0.7601,manager,3
+Please respond to client's email from yesterday.,medium,0.589,manager,3
+Can you review my PR when you get a chance? No rush.,medium,0.6574,peer,1
+Your account password expires in 3 days,medium,0.5787,unknown,0
+"SLA breach in 20 min if not resolved, client watching",high,0.9433,manager,3
+"sos: i'm stuck in traffic, client meeting in 5 min, can you start?",high,0.8208,peer,1
+Budget approval needed before EOD TODAY - final reminder,high,0.7132,manager,3
+"Yo, free this evening?",low,0.0743,peer,1
+Your access request has been approved,medium,0.3752,unknown,0
+Tip: complete your profile to get more matches,low,0.0231,unknown,0
+Reminder: gym session at 7am tomorrow.,low,0.0508,peer,1
+"System alert: CPU at 99% for 15 min, intervention needed",high,0.7959,unknown,0
+your subscription renews in 7 days,low,0.1584,unknown,0
+weekly digest: top stories for you,low,0.3423,unknown,0
+Expense report needs to be submitted this week.,medium,0.6813,unknown,0
+Can you send me that article you mentioned?,low,0.3228,peer,1
+Netflix just dropped a new show btw,low,0.112,peer,1
+"new hire starting monday, please prepare onboarding",medium,0.4845,manager,3
+Security patch needs to be applied this week.,medium,0.5124,peer,1
+ESCALATION: Customer data visible to wrong users - P0!,high,0.9441,manager,3
+can you help debug this issue by eod?,medium,0.6343,peer,1
+"Server memory leak crashing every 10 min, need patch NOW!",high,0.7488,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared!",high,0.8963,manager,3
+Please respond to client's email from yesterday,medium,0.5824,manager,3
+critical bug in checkout flow - users can't pay - ship hotfix now,high,0.7201,peer,1
+Your order has shipped.,low,0.0754,unknown,0
+"Candidate background check cleared, offer going out.",medium,0.6212,manager,3
+Can you cover for me in the standup tomorrow.,medium,0.6118,peer,1
+Team: code freeze is Thursday EOD,medium,0.3864,manager,3
+"asap: insurance claim deadline today 5pm, submit now",high,0.7925,unknown,0
+Can you cover for me in the standup tomorrow.,medium,0.6066,peer,1
+Just checking in!,low,0.1419,peer,1
+"critical path: if you don't merge this in 10 min, release fails",high,0.9708,peer,1
+can you send me that article you mentioned?,low,0.1334,peer,1
+Production is down. Repeat: prod is down. All hands NOW,high,0.9333,peer,1
+your child's school: please call urgently,high,0.8702,unknown,0
+please update the jira ticket with your progress,medium,0.6456,peer,1
+"Daily step goal: 80% achieved, keep going.",low,0.3451,unknown,0
+ALERT: Unauthorized access attempt on production,high,0.814,unknown,0
+Roadmap discussion moved to this Thursday,medium,0.5074,manager,3
+"Contract renewal is up for review, need your input.",medium,0.476,manager,3
+Your order has shipped!,low,0.0558,unknown,0
+Draft the SOW and share for review by tomorrow,medium,0.6796,peer,1
+"project update: everything's on track, no blockers",low,0.2953,peer,1
+reminder: dentist appointment thursday 4pm,low,0.3179,unknown,0
+no action needed - just a status ping,low,0.1326,peer,1
+"Server memory leak crashing every 10 min, need patch NOW!",high,0.7286,peer,1
+Tip: complete your profile to get more matches,low,0.242,unknown,0
+Please review the proposal before the meeting,medium,0.3746,peer,1
+"Gas leak reported in the building, exit immediately!",high,0.9706,unknown,0
+need your signature on the nda before eod,medium,0.3773,manager,3
+No action needed - just a status ping,low,0.1875,peer,1
+Your account password expires in 3 days.,medium,0.4119,unknown,0
+Have you tried that new restaurant.,low,0.31,peer,1
+bank flagged suspicious transaction on company account,high,0.904,unknown,0
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract!,high,0.7122,manager,3
+"Project update: everything's on track, no blockers",low,0.3436,peer,1
+Reminder: team lunch tomorrow.,low,0.1913,peer,1
+"URGENT: Client threatening to pull the contract, need you on call!",high,0.9809,manager,3
+fyi i'll be wfh tomorrow,low,0.1596,peer,1
+Just checking in!,low,0.3037,peer,1
+"Client meeting moved to 4pm, please update your calendar.",medium,0.6887,manager,3
+"Daily step goal: 80% achieved, keep going.",low,0.3006,unknown,0
+"Emergency: data leak in prod DB, escalate immediately!",high,0.8693,peer,1
+"Production cert expires in 45 minutes, renew NOW",high,0.787,peer,1
+Tip: complete your profile to get more matches.,low,0.2201,unknown,0
+"ceo needs the numbers in 10 minutes, send immediately",high,0.7857,manager,3
+Deployment scheduled for 3pm today - just FYI,medium,0.3649,peer,1
+"Marketing campaign going live Thursday, review copy.",medium,0.6552,peer,1
+"Hey, how's the new project going.",low,0.0285,peer,1
+No action needed - just a status ping,low,0.1471,peer,1
+"URGENT: Client threatening to pull the contract, need you on call",high,0.9662,manager,3
+don't forget mom's birthday next week,low,0.1418,family,2
+Critical bug in checkout flow - users can't pay - ship hotfix now,high,0.9366,peer,1
+"Hey, what's up?",low,0.2769,peer,1
+heads up: client visiting office tomorrow,medium,0.4668,manager,3
+"Production cert expires in 45 minutes, renew NOW",high,0.7553,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared",high,0.8717,manager,3
+ALERT: Unauthorized access attempt on production,high,0.8075,unknown,0
+reminder: gym session at 7am tomorrow,low,0.3487,peer,1
+Random thought: we should catch up sometime,low,0.1454,peer,1
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.9807,peer,1
+can you cover for me in the standup tomorrow?,medium,0.6733,peer,1
+Tip: complete your profile to get more matches.,low,0.2736,unknown,0
+"Happy birthday to Raj btw, don't forget to wish.",low,0.0799,peer,1
+Team: please fill in the availability form by Thursday.,medium,0.5059,manager,3
+Team: please fill in the availability form by Thursday.,medium,0.6179,manager,3
+Client exec escalated to our CEO - call me now,high,0.7271,manager,3
+Are we still on for Friday drinks.,low,0.1649,peer,1
+New blog post from your favourite author.,low,0.0988,unknown,0
+Random thought: we should catch up sometime,low,0.2854,peer,1
+"System alert: CPU at 99% for 15 min, intervention needed",high,0.7809,unknown,0
+"Gas leak reported in the building, exit immediately",high,0.8977,unknown,0
+Random thought: we should catch up sometime.,low,0.0924,peer,1
+Don't forget mom's birthday next week,low,0.2575,family,2
+can you cover for me in the standup tomorrow?,medium,0.6683,peer,1
+"Urgent: refund batch job failed, 500 customers affected",high,0.7092,peer,1
+Security patch needs to be applied this week.,medium,0.5941,peer,1
+"Production cert expires in 45 minutes, renew NOW!",high,0.7398,peer,1
+"Client meeting moved to 4pm, please update your calendar",medium,0.4904,manager,3
+"Building fire alarm triggered, evacuate immediately!",high,0.8635,unknown,0
+client exec escalated to our ceo - call me now,high,0.7768,manager,3
+"urgent: refund batch job failed, 500 customers affected",high,0.8748,peer,1
+did you watch the game last night?,low,0.0471,peer,1
+"CRITICAL PATH: If you don't merge this in 10 min, release fails",high,0.9145,peer,1
+Team: code freeze is Thursday EOD,medium,0.6837,manager,3
+"Airport: your flight departs in 40 min, proceed to gate",high,0.9292,unknown,0
+"urgent: client threatening to pull the contract, need you on call",high,0.8373,manager,3
+"ASAP: Insurance claim deadline today 5pm, submit now!",high,0.7551,unknown,0
+API rate limits hit 80% - keep an eye on it.,medium,0.5309,peer,1
+"URGENT: Server is down, customers can't login - call NOW!",high,0.7399,peer,1
+"Ransomware detected on 3 machines, disconnect from VPN now",high,0.9209,peer,1
+"Server memory leak crashing every 10 min, need patch NOW",high,0.8047,peer,1
+Need your signature on the NDA before EOD.,medium,0.6731,manager,3
+roadmap discussion moved to this thursday,medium,0.4563,manager,3
+"happy birthday to raj btw, don't forget to wish",low,0.169,peer,1
+PR review needed before tomorrow's sprint demo.,medium,0.639,peer,1
+"power outage in datacenter, backup failing",high,0.8947,peer,1
+vendor payment pending your approval,medium,0.3927,manager,3
+"Hey, are you coming to the party?",low,0.0436,peer,1
+Random thought: we should catch up sometime,low,0.1881,peer,1
+Urgent: lawyer needs document signed in next 30 min,high,0.7833,manager,3
+"Building fire alarm triggered, evacuate immediately",high,0.8631,unknown,0
+netflix just dropped a new show btw,low,0.1771,peer,1
+Your package has been delivered.,low,0.0211,unknown,0
+Did you watch the game last night?,low,0.1151,peer,1
+"project update: everything's on track, no blockers",low,0.103,peer,1
+Deployment scheduled for 3pm today - just FYI.,medium,0.3776,peer,1
+Can you help debug this issue by EOD?,medium,0.4383,peer,1
+"ASAP: Security breach detected, isolate the system",high,0.7884,peer,1
+Your order has shipped!,low,0.0598,unknown,0
+urgent: lawyer needs document signed in next 30 min,high,0.8415,manager,3
+Vendor payment pending your approval.,medium,0.398,manager,3
+roadmap discussion moved to this thursday,medium,0.5242,manager,3
+reminder: performance review cycle starts monday,medium,0.5939,manager,3
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.8951,peer,1
+Did you watch the game last night.,low,0.1524,peer,1
+Quick question - do you prefer chai or coffee?,low,0.1831,peer,1
+"Driver: your passenger has left belongings, urgent return",high,0.7041,unknown,0
+New blog post from your favourite author.,low,0.0872,unknown,0
+fyi i'll be wfh tomorrow,low,0.1134,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared",high,0.9595,manager,3
+please confirm your availability for client call,medium,0.3667,manager,3
+"building fire alarm triggered, evacuate immediately",high,0.8448,unknown,0
+Survey: rate your experience with us.,low,0.1685,unknown,0
+"marketing campaign going live thursday, review copy",medium,0.483,peer,1
+"CRITICAL PATH: If you don't merge this in 10 min, release fails!",high,0.8066,peer,1
+API rate limits hit 80% - keep an eye on it,medium,0.5781,peer,1
+"URGENT: Wrong data pushed to 10k users, recall now",high,0.8731,peer,1
+"hey, what's up?",low,0.3069,peer,1
+"Medical emergency at office, everyone please respond",high,0.8943,unknown,0
+Tip: complete your profile to get more matches.,low,0.0539,unknown,0
+"URGENT: Wrong data pushed to 10k users, recall now",high,0.9764,peer,1
+Your account password expires in 3 days.,medium,0.3724,unknown,0
+When are you free for a quick catch-up call.,low,0.0296,peer,1
+"Hey, enjoyed the presentation today!",low,0.2149,peer,1
+"Ransomware detected on 3 machines, disconnect from VPN now",high,0.835,peer,1
+"ambulance called, priya collapsed in office, please come",high,0.923,peer,1
+Reminder: submit your timesheet by EOD Friday.,low,0.1324,unknown,0
+Your two-factor auth was just used from an unknown location,high,0.8635,unknown,0
+"Just saw your post on LinkedIn, nice one!",low,0.1809,peer,1
+"Candidate background check cleared, offer going out",medium,0.3729,manager,3
+Can you hop on a quick call sometime today.,medium,0.6519,manager,3
+Final warning: approve the PR or we miss the release window!,high,0.9487,peer,1
+When are you free for a quick catch-up call.,low,0.0345,peer,1
+Your monthly statement is ready to view,low,0.1751,unknown,0
+"urgent: wrong data pushed to 10k users, recall now",high,0.7389,peer,1
+Did you get my email from yesterday.,low,0.3198,peer,1
+"emergency: project go-live in 2 hours, critical test failing",high,0.8855,manager,3
+"Fraud alert: unusual activity on your account, call bank!",high,0.7931,unknown,0
+"CRITICAL PATH: If you don't merge this in 10 min, release fails!",high,0.7702,peer,1
+"asap: security breach detected, isolate the system",high,0.7097,peer,1
+Need your signature on the NDA before EOD.,medium,0.5397,manager,3
+Network switch failure - entire floor is offline!,high,0.7233,peer,1
+Security patch needs to be applied this week,medium,0.6264,peer,1
+"monthly report due this friday, just a reminder",medium,0.5839,manager,3
+Don't forget mom's birthday next week.,low,0.2256,family,2
+"Fraud alert: unusual activity on your account, call bank",high,0.7509,unknown,0
+Are we still on for Friday drinks?,low,0.1346,peer,1
+"Dinner at 8pm, let me know",low,0.2658,family,2
+"Hey, what's up.",low,0.1185,peer,1
+can you hop on a quick call sometime today?,medium,0.599,manager,3
+ESCALATION: Customer data visible to wrong users - P0!,high,0.733,manager,3
+"Load balancer config change tonight, be aware.",medium,0.4098,peer,1
+Your benefits enrollment closes in 2 days.,medium,0.5352,unknown,0
+Netflix just dropped a new show btw,low,0.1725,peer,1
+Please confirm your availability for client call.,medium,0.6308,manager,3
+The cafeteria has biryani today just saying.,low,0.2032,peer,1
+Security patch needs to be applied this week,medium,0.5347,peer,1
+"Client on the phone, need answer right now",high,0.8985,manager,3
+Tip: complete your profile to get more matches,low,0.2264,unknown,0
+"Urgent: refund batch job failed, 500 customers affected!",high,0.7746,peer,1
+your two-factor auth was just used from an unknown location,high,0.8547,unknown,0
+Client exec escalated to our CEO - call me now,high,0.9674,manager,3
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract,high,0.7485,manager,3
+"Hey, enjoyed the presentation today!",low,0.3193,peer,1
+Please review the proposal before the meeting.,medium,0.4011,peer,1
+the cafeteria has biryani today just saying,low,0.3303,peer,1
+Your package has been delivered.,low,0.2951,unknown,0
+escalation: customer data visible to wrong users - p0,high,0.8326,manager,3
+Bank flagged suspicious transaction on company account!,high,0.981,unknown,0
+"Building fire alarm triggered, evacuate immediately",high,0.787,unknown,0
+Expense report needs to be submitted this week.,medium,0.5668,unknown,0
+"Fraud alert: unusual activity on your account, call bank",high,0.7577,unknown,0
+Just checking in!,low,0.2382,peer,1
+"contract renewal is up for review, need your input",medium,0.5006,manager,3
+Reminder: submit your timesheet by EOD Friday.,low,0.0828,unknown,0
+New blog post from your favourite author.,low,0.0974,unknown,0
+Have you tried that new restaurant.,low,0.064,peer,1
+The cafeteria has biryani today just saying.,low,0.0548,peer,1
+"Emergency: project go-live in 2 hours, critical test failing!",high,0.8104,manager,3
+please update the jira ticket with your progress,medium,0.5625,peer,1
+client exec escalated to our ceo - call me now,high,0.8675,manager,3
+Your package has been delivered.,low,0.1372,unknown,0
+deployment scheduled for 3pm today - just fyi,medium,0.5301,peer,1
+Lunch plans today?,low,0.1171,peer,1
+Budget spreadsheet needs your sign-off this week,medium,0.5241,manager,3
+"Power outage in datacenter, backup failing!",high,0.8471,peer,1
+Please double-check the prod deployment checklist.,medium,0.434,peer,1
+pr review needed before tomorrow's sprint demo,medium,0.5923,peer,1
+"client meeting moved to 4pm, please update your calendar",medium,0.6471,manager,3
+PR review needed before tomorrow's sprint demo,medium,0.5038,peer,1
+"grocery list: milk, eggs, bread",low,0.221,family,2
+security patch needs to be applied this week,medium,0.4221,peer,1
+fyi the meeting room is booked for 3pm,low,0.2023,peer,1
+Pick up the dry cleaning on your way home,low,0.04,family,2
+client exec escalated to our ceo - call me now,high,0.8105,manager,3
+mom: beta call me now something happened to dad,high,0.9239,family,2
+interview scheduled for candidate tomorrow 2pm,medium,0.6894,manager,3
+"URGENT: Client threatening to pull the contract, need you on call",high,0.8255,manager,3
+Please double-check the prod deployment checklist.,medium,0.6465,peer,1
+your subscription renews in 7 days,low,0.1733,unknown,0
+"Updated design files shared, please review",medium,0.4026,peer,1
+Did you get my email from yesterday.,low,0.3307,peer,1
+"CRITICAL PATH: If you don't merge this in 10 min, release fails",high,0.9302,peer,1
+Happy Friday!,low,0.3042,peer,1
+Your subscription renews in 7 days.,low,0.1151,unknown,0
+"bro the server is literally on fire, call me now",high,0.8824,peer,1
+please review the proposal before the meeting,medium,0.6436,peer,1
+Coffee later.,low,0.2774,peer,1
+are we still on for friday drinks?,low,0.1238,peer,1
+"Power outage in datacenter, backup failing",high,0.7496,peer,1
+"Driver: your passenger has left belongings, urgent return",high,0.8004,unknown,0
+"Ransomware detected on 3 machines, disconnect from VPN now!",high,0.8783,peer,1
+"Contract renewal is up for review, need your input",medium,0.3625,manager,3
+Network switch failure - entire floor is offline!,high,0.9774,peer,1
+Have you tried that new restaurant.,low,0.046,peer,1
+Interview scheduled for candidate tomorrow 2pm,medium,0.5701,manager,3
+"URGENT: Investor call in 15 min, deck not loading, fix NOW",high,0.8842,manager,3
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract,high,0.7957,manager,3
+emergency team call in 5 minutes - mandatory attendance,high,0.7685,manager,3
+"Marketing campaign going live Thursday, review copy.",medium,0.5336,peer,1
+Feature flag needs to be enabled before release,medium,0.5513,peer,1
+"critical: payment gateway failing, losing transactions",high,0.7027,peer,1
+ESCALATION: Customer data visible to wrong users - P0,high,0.8601,manager,3
+"Airport: your flight departs in 40 min, proceed to gate!",high,0.9543,unknown,0
+Mom: beta CALL ME NOW something happened to dad!,high,0.9305,family,2
+FYI the meeting room is booked for 3pm,low,0.3166,peer,1
+interview scheduled for candidate tomorrow 2pm,medium,0.3845,manager,3
+"marketing campaign going live thursday, review copy",medium,0.3725,peer,1
+Network switch failure - entire floor is offline!,high,0.8603,peer,1
+"Driver: your passenger has left belongings, urgent return!",high,0.9694,unknown,0
+FYI - office is closing early Friday.,low,0.0595,peer,1
+Client exec escalated to our CEO - call me now,high,0.9633,manager,3
+please double-check the prod deployment checklist,medium,0.6482,peer,1
+"Hey, enjoyed the presentation today.",low,0.0663,peer,1
+random thought: we should catch up sometime,low,0.2187,peer,1
+please double-check the prod deployment checklist,medium,0.6336,peer,1
+Can you help debug this issue by EOD?,medium,0.4814,peer,1
+New ticket assigned to you: medium priority.,medium,0.5657,unknown,0
+Can you send me that article you mentioned?,low,0.2563,peer,1
+Budget approval needed before EOD TODAY - final reminder!,high,0.7961,manager,3
+critical bug in checkout flow - users can't pay - ship hotfix now,high,0.7024,peer,1
+database migration scheduled for tonight 11pm,medium,0.6703,peer,1
+budget spreadsheet needs your sign-off this week,medium,0.6346,manager,3
+Database migration scheduled for tonight 11pm,medium,0.5122,peer,1
+"contract renewal is up for review, need your input",medium,0.6063,manager,3
+New company policy: please read and acknowledge,medium,0.4841,manager,3
+random thought: we should catch up sometime,low,0.127,peer,1
+random thought: we should catch up sometime,low,0.2959,peer,1
+tip: complete your profile to get more matches,low,0.2911,unknown,0
+good morning!,low,0.2435,family,2
+Your monthly statement is ready to view,low,0.3427,unknown,0
+Reminder: performance review cycle starts Monday,medium,0.3855,manager,3
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract!,high,0.9653,manager,3
+Can you send me that article you mentioned?,low,0.2445,peer,1
+Quick question - do you prefer chai or coffee?,low,0.2302,peer,1
+"Medical emergency at office, everyone please respond!",high,0.9541,unknown,0
+"Grocery list: milk, eggs, bread.",low,0.1868,family,2
+"ASAP: Insurance claim deadline today 5pm, submit now!",high,0.7835,unknown,0
+"load balancer config change tonight, be aware",medium,0.5108,peer,1
+Can you share the Q3 report before COB today.,medium,0.4783,manager,3
+Need your signature on the NDA before EOD.,medium,0.3715,manager,3
+"Standby for oncall this weekend, you're primary.",medium,0.647,manager,3
+FYI the meeting room is booked for 3pm.,low,0.0431,peer,1
+"Client on the phone, need answer right now",high,0.9693,manager,3
+"urgent: refund batch job failed, 500 customers affected",high,0.7999,peer,1
+Can you help debug this issue by EOD.,medium,0.4697,peer,1
+"grocery list: milk, eggs, bread",low,0.2838,family,2
+roadmap discussion moved to this thursday,medium,0.4947,manager,3
+Please double-check the prod deployment checklist.,medium,0.4506,peer,1
+Your access request has been approved.,medium,0.5552,unknown,0
+your order has shipped!,low,0.2146,unknown,0
+How was your weekend?,low,0.1569,peer,1
+Can you send me that article you mentioned?,low,0.1203,peer,1
+Critical bug in checkout flow - users can't pay - ship hotfix now!,high,0.9469,peer,1
+ESCALATION: Customer data visible to wrong users - P0!,high,0.768,manager,3
+expense report needs to be submitted this week,medium,0.6703,unknown,0
+ESCALATION: Customer data visible to wrong users - P0!,high,0.754,manager,3
+"The staging environment is acting up, can you check.",medium,0.6588,peer,1
+Your leave request has been approved,medium,0.5025,unknown,0
+"yo, free this evening?",low,0.1003,peer,1
+"Load balancer config change tonight, be aware",medium,0.5351,peer,1
+"Just a heads up, I'll be 5 min late.",low,0.2295,peer,1
+Just checking in.,low,0.2866,peer,1
+Team: please fill in the availability form by Thursday.,medium,0.417,manager,3
+"hey, enjoyed the presentation today!",low,0.2574,peer,1
+Interview scheduled for candidate tomorrow 2pm,medium,0.4738,manager,3
+Budget spreadsheet needs your sign-off this week.,medium,0.4816,manager,3
+"URGENT: Server is down, customers can't login - call NOW!",high,0.8647,peer,1
+"Production cert expires in 45 minutes, renew NOW!",high,0.8769,peer,1
+"Client meeting moved to 4pm, please update your calendar.",medium,0.3662,manager,3
+your order has shipped!,low,0.0468,unknown,0
+"Call me RIGHT NOW, something went wrong with the release!",high,0.793,manager,3
+ALERT: Unauthorized access attempt on production!,high,0.7036,unknown,0
+reminder: submit your timesheet by eod friday,low,0.0745,unknown,0
+"mom: beta, call when free",low,0.0728,family,2
+The cafeteria has biryani today just saying.,low,0.2955,peer,1
+"Power outage in datacenter, backup failing",high,0.7131,peer,1
+did you watch the game last night?,low,0.1716,peer,1
+"Just a heads up, I'll be 5 min late",low,0.0224,peer,1
+fyi the meeting room is booked for 3pm,low,0.0835,peer,1
+"dinner at 8pm, let me know",low,0.3287,family,2
+Can you cover for me in the standup tomorrow?,medium,0.6117,peer,1
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.9196,peer,1
+"asap: insurance claim deadline today 5pm, submit now",high,0.9795,unknown,0
+Heads up: client visiting office tomorrow.,medium,0.3928,manager,3
+draft the sow and share for review by tomorrow,medium,0.5847,peer,1
+critical bug in checkout flow - users can't pay - ship hotfix now,high,0.9015,peer,1
+Have you tried that new restaurant.,low,0.3054,peer,1
+quarterly goals need to be updated in the system,medium,0.6026,manager,3
+Did you get my email from yesterday?,low,0.1385,peer,1
+"production cert expires in 45 minutes, renew now",high,0.8379,peer,1
+please update the jira ticket with your progress,medium,0.626,peer,1
+"Hey, enjoyed the presentation today.",low,0.1734,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared!",high,0.8377,manager,3
+Please respond to client's email from yesterday.,medium,0.5837,manager,3
+"New project kicking off Monday, you're assigned.",medium,0.5293,manager,3
+Pick up the dry cleaning on your way home.,low,0.2233,family,2
+"Hey, how's the new project going.",low,0.1812,peer,1
+database corruption detected - halt all writes immediately,high,0.9835,peer,1
+"breach: ssh keys exposed in public repo, rotate now",high,0.9085,peer,1
+Tip: complete your profile to get more matches,low,0.2972,unknown,0
+"new project kicking off monday, you're assigned",medium,0.386,manager,3
+quarterly goals need to be updated in the system,medium,0.5231,manager,3
+"ASAP: Insurance claim deadline today 5pm, submit now",high,0.7093,unknown,0
+Your monthly statement is ready to view.,low,0.0465,unknown,0
+"hey, are you coming to the party?",low,0.2471,peer,1
+reminder: gym session at 7am tomorrow,low,0.0527,peer,1
+"Fraud alert: unusual activity on your account, call bank!",high,0.7296,unknown,0
+"Fraud alert: unusual activity on your account, call bank",high,0.9838,unknown,0
+Bank flagged suspicious transaction on company account!,high,0.8206,unknown,0
+Client exec escalated to our CEO - call me now,high,0.8305,manager,3
+Please confirm your availability for client call.,medium,0.366,manager,3
+"SLA breach in 20 min if not resolved, client watching",high,0.885,manager,3
+ALERT: Unauthorized access attempt on production!,high,0.7813,unknown,0
+"regulatory audit team arriving in 1 hour, not prepared",high,0.8575,manager,3
+ESCALATION: Customer data visible to wrong users - P0!,high,0.9768,manager,3
+Your order has shipped!,low,0.2646,unknown,0
+"Driver: your passenger has left belongings, urgent return!",high,0.7292,unknown,0
+Are we still on for Friday drinks?,low,0.211,peer,1
+Tip: complete your profile to get more matches,low,0.0749,unknown,0
+Weekend plans.,low,0.094,family,2
+"Candidate background check cleared, offer going out",medium,0.3801,manager,3
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.7363,peer,1
+New blog post from your favourite author.,low,0.0206,unknown,0
+"Building fire alarm triggered, evacuate immediately!",high,0.926,unknown,0
+"BREACH: SSH keys exposed in public repo, rotate now!",high,0.9549,peer,1
+PR review needed before tomorrow's sprint demo.,medium,0.5263,peer,1
+"SOS: I'm stuck in traffic, client meeting in 5 min, can you start!",high,0.7606,peer,1
+"new hire starting monday, please prepare onboarding",medium,0.5148,manager,3
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.8252,peer,1
+"Marketing campaign going live Thursday, review copy",medium,0.5084,peer,1
+new blog post from your favourite author,low,0.0394,unknown,0
+Just checking in.,low,0.1359,peer,1
+Netflix just dropped a new show btw,low,0.3421,peer,1
+security patch needs to be applied this week,medium,0.6168,peer,1
+Netflix just dropped a new show btw.,low,0.0725,peer,1
+"project update: everything's on track, no blockers",low,0.1204,peer,1
+API rate limits hit 80% - keep an eye on it,medium,0.4178,peer,1
+"Regulatory audit team arriving in 1 hour, not prepared",high,0.7759,manager,3
+"Just saw your post on LinkedIn, nice one.",low,0.0874,peer,1
+your child's school: please call urgently,high,0.8772,unknown,0
+"Hey, what's up.",low,0.1075,peer,1
+"ASAP: Security breach detected, isolate the system!",high,0.7825,peer,1
+FYI - office is closing early Friday,low,0.2154,peer,1
+just checking in!,low,0.0985,peer,1
+API rate limits hit 80% - keep an eye on it,medium,0.5469,peer,1
+Quarterly goals need to be updated in the system.,medium,0.4384,manager,3
+"Candidate background check cleared, offer going out.",medium,0.38,manager,3
+Your order has shipped!,low,0.0505,unknown,0
+Draft the SOW and share for review by tomorrow.,medium,0.386,peer,1
+"happy birthday to raj btw, don't forget to wish",low,0.1118,peer,1
+Urgent: lawyer needs document signed in next 30 min,high,0.7586,manager,3
+PR review needed before tomorrow's sprint demo.,medium,0.5951,peer,1
+Network switch failure - entire floor is offline!,high,0.8277,peer,1
+coffee later?,low,0.0285,peer,1
+Reminder: performance review cycle starts Monday,medium,0.5963,manager,3
+Weekly digest: top stories for you,low,0.2422,unknown,0
+Your access request has been approved.,medium,0.4758,unknown,0
+"Just saw your post on LinkedIn, nice one.",low,0.2712,peer,1
+"Hey, are you coming to the party?",low,0.0937,peer,1
+"URGENT: Server is down, customers can't login - call NOW",high,0.9718,peer,1
+weekly digest: top stories for you,low,0.2384,unknown,0
+Deployment scheduled for 3pm today - just FYI,medium,0.6401,peer,1
+when are you free for a quick catch-up call?,low,0.1423,peer,1
+Database corruption detected - halt all writes immediately!,high,0.7869,peer,1
+"ransomware detected on 3 machines, disconnect from vpn now",high,0.7641,peer,1
+"Mom: beta, call when free.",low,0.2716,family,2
+"ASAP: Security breach detected, isolate the system",high,0.7842,peer,1
+New ticket assigned to you: medium priority.,medium,0.4443,unknown,0
+alert: unauthorized access attempt on production,high,0.8387,unknown,0
+FYI - office is closing early Friday,low,0.0996,peer,1
+can you hop on a quick call sometime today?,medium,0.3898,manager,3
+"New project kicking off Monday, you're assigned.",medium,0.5744,manager,3
+Weekend plans.,low,0.3306,family,2
+The cafeteria has biryani today just saying.,low,0.1528,peer,1
+Did you watch the game last night.,low,0.2624,peer,1
+"URGENT: Investor call in 15 min, deck not loading, fix NOW",high,0.9163,manager,3
+survey: rate your experience with us,low,0.284,unknown,0
+"power outage in datacenter, backup failing",high,0.8211,peer,1
+"Grocery list: milk, eggs, bread",low,0.0283,family,2
+"New project kicking off Monday, you're assigned.",medium,0.6008,manager,3
+"Final: board presentation in 8 minutes, file won't open!",high,0.845,manager,3
+good morning!,low,0.1221,family,2
+can you send me that article you mentioned?,low,0.1611,peer,1
+meme incoming 😂,low,0.2241,peer,1
+Need your signature on the NDA before EOD.,medium,0.3822,manager,3
+Netflix just dropped a new show btw.,low,0.0596,peer,1
+Quick question - do you prefer chai or coffee?,low,0.1169,peer,1
+weekly digest: top stories for you,low,0.1069,unknown,0
+"production cert expires in 45 minutes, renew now",high,0.9041,peer,1
+you're listed as emergency contact - please call hospital,high,0.7744,unknown,0
+Bank flagged suspicious transaction on company account!,high,0.777,unknown,0
+how was your weekend?,low,0.1023,peer,1
+"CEO needs the numbers in 10 minutes, send immediately",high,0.7897,manager,3
+"candidate background check cleared, offer going out",medium,0.5785,manager,3
+"monthly report due this friday, just a reminder",medium,0.4585,manager,3
+good morning!,low,0.2249,family,2
+"Dinner at 8pm, let me know.",low,0.1646,family,2
+your child's school: please call urgently,high,0.9444,unknown,0
+"production cert expires in 45 minutes, renew now",high,0.8418,peer,1
+"Project update: everything's on track, no blockers",low,0.0366,peer,1
+"CRITICAL: Payment gateway failing, losing transactions",high,0.9148,peer,1
+"ambulance called, priya collapsed in office, please come",high,0.9723,peer,1
+Team: please fill in the availability form by Thursday,medium,0.6089,manager,3
+"Production cert expires in 45 minutes, renew NOW",high,0.8389,peer,1
+"ASAP: Insurance claim deadline today 5pm, submit now",high,0.9421,unknown,0
+"New hire starting Monday, please prepare onboarding.",medium,0.6479,manager,3
+"URGENT: Client threatening to pull the contract, need you on call",high,0.9892,manager,3
+New ticket assigned to you: medium priority.,medium,0.6747,unknown,0
+"URGENT: Wrong data pushed to 10k users, recall now!",high,0.9393,peer,1
+Survey: rate your experience with us,low,0.2433,unknown,0
+Your leave request has been approved.,medium,0.4341,unknown,0
+Can you hop on a quick call sometime today?,medium,0.5123,manager,3
+roadmap discussion moved to this thursday,medium,0.5059,manager,3
+"Updated design files shared, please review.",medium,0.6531,peer,1
+Please respond to client's email from yesterday.,medium,0.5645,manager,3
+"mom: beta, call when free",low,0.3332,family,2
+Database migration scheduled for tonight 11pm.,medium,0.4251,peer,1
+"marketing campaign going live thursday, review copy",medium,0.4465,peer,1
+How was your weekend?,low,0.2111,peer,1
+Can you share the Q3 report before COB today?,medium,0.5815,manager,3
+coffee later?,low,0.1622,peer,1
+pr review needed before tomorrow's sprint demo,medium,0.3978,peer,1
+your access request has been approved,medium,0.6775,unknown,0
+your training course expires in 5 days,medium,0.4983,unknown,0
+Please double-check the prod deployment checklist.,medium,0.4611,peer,1
+Did you watch the game last night?,low,0.2026,peer,1
+"Bro the server is literally on fire, call me now!",high,0.9708,peer,1
+"Gas leak reported in the building, exit immediately!",high,0.8534,unknown,0
+"Urgent: refund batch job failed, 500 customers affected!",high,0.7492,peer,1
+"URGENT: Wrong data pushed to 10k users, recall now",high,0.818,peer,1
+API rate limits hit 80% - keep an eye on it,medium,0.4036,peer,1
+network switch failure - entire floor is offline,high,0.8306,peer,1
+Weekend plans?,low,0.1081,family,2
+Have you tried that new restaurant.,low,0.0789,peer,1
+Can you send me that article you mentioned?,low,0.1905,peer,1
+the cafeteria has biryani today just saying,low,0.2673,peer,1
+Your subscription renews in 7 days,low,0.2,unknown,0
+"driver: your passenger has left belongings, urgent return",high,0.9689,unknown,0
+"grocery list: milk, eggs, bread",low,0.0377,family,2
+"CEO needs the numbers in 10 minutes, send immediately!",high,0.9782,manager,3
+Budget spreadsheet needs your sign-off this week,medium,0.4375,manager,3
+Survey: rate your experience with us.,low,0.2782,unknown,0
+Weekend plans?,low,0.2128,family,2
+"Candidate background check cleared, offer going out",medium,0.438,manager,3
+FYI the meeting room is booked for 3pm,low,0.1197,peer,1
+"final: board presentation in 8 minutes, file won't open",high,0.8421,manager,3
+your subscription renews in 7 days,low,0.1751,unknown,0
+"building fire alarm triggered, evacuate immediately",high,0.7591,unknown,0
+Your subscription renews in 7 days.,low,0.0601,unknown,0
+"ASAP: Insurance claim deadline today 5pm, submit now",high,0.8692,unknown,0
+Can you cover for me in the standup tomorrow.,medium,0.6629,peer,1
+"medical emergency at office, everyone please respond",high,0.8511,unknown,0
+Reminder: gym session at 7am tomorrow,low,0.276,peer,1
+"Contract renewal is up for review, need your input.",medium,0.5255,manager,3
+"Bro the server is literally on fire, call me now!",high,0.9888,peer,1
+"Monthly report due this Friday, just a reminder.",medium,0.526,manager,3
+"Hey, enjoyed the presentation today!",low,0.0624,peer,1
+emergency team call in 5 minutes - mandatory attendance,high,0.8629,manager,3
+"Gas leak reported in the building, exit immediately!",high,0.7534,unknown,0
+Did you watch the game last night.,low,0.0934,peer,1
+Your benefits enrollment closes in 2 days.,medium,0.4436,unknown,0
+"hey, how's the new project going?",low,0.1263,peer,1
+Your travel reimbursement has been processed,medium,0.6338,unknown,0
+"the staging environment is acting up, can you check?",medium,0.6834,peer,1
+api rate limits hit 80% - keep an eye on it,medium,0.5133,peer,1
+Your account password expires in 3 days,medium,0.5984,unknown,0
+You're listed as emergency contact - please call hospital!,high,0.8404,unknown,0
+"breach: ssh keys exposed in public repo, rotate now",high,0.7705,peer,1
+"just a heads up, i'll be 5 min late",low,0.2388,peer,1
+fyi the meeting room is booked for 3pm,low,0.3142,peer,1
+"Ambulance called, Priya collapsed in office, please come!",high,0.8689,peer,1
+Quarterly goals need to be updated in the system.,medium,0.5294,manager,3
+Your monthly statement is ready to view.,low,0.0905,unknown,0
+"Driver: your passenger has left belongings, urgent return!",high,0.7226,unknown,0
+how was your weekend?,low,0.1798,peer,1
+"SOS: I'm stuck in traffic, client meeting in 5 min, can you start?",high,0.7406,peer,1
+bank flagged suspicious transaction on company account,high,0.9373,unknown,0
+"ransomware detected on 3 machines, disconnect from vpn now",high,0.7386,peer,1
+"Long weekend next week, any plans.",low,0.1323,peer,1
+"Driver: your passenger has left belongings, urgent return",high,0.8595,unknown,0
+Mom: beta CALL ME NOW something happened to dad,high,0.7518,family,2
+"candidate background check cleared, offer going out",medium,0.5571,manager,3
+just checking in!,low,0.0333,peer,1
+Database migration scheduled for tonight 11pm.,medium,0.4624,peer,1
+Please respond to client's email from yesterday,medium,0.6,manager,3
+"Client on the phone, need answer right now",high,0.7397,manager,3
+Did you get my email from yesterday.,low,0.2166,peer,1
+Please review the proposal before the meeting,medium,0.5441,peer,1
+vendor payment pending your approval,medium,0.585,manager,3
+"medical emergency at office, everyone please respond",high,0.8813,unknown,0
+new blog post from your favourite author,low,0.0618,unknown,0
+"Regulatory audit team arriving in 1 hour, not prepared",high,0.7179,manager,3
+can you share the q3 report before cob today?,medium,0.5186,manager,3
+New blog post from your favourite author.,low,0.2219,unknown,0
+"gas leak reported in the building, exit immediately",high,0.9776,unknown,0
+Your leave request has been approved.,medium,0.5444,unknown,0
+"New hire starting Monday, please prepare onboarding.",medium,0.4555,manager,3
+"new hire starting monday, please prepare onboarding",medium,0.6187,manager,3
+"urgent: refund batch job failed, 500 customers affected",high,0.9532,peer,1
+Survey: rate your experience with us,low,0.2374,unknown,0
+"Emergency: project go-live in 2 hours, critical test failing",high,0.7015,manager,3
+"Client on the phone, need answer right now",high,0.8212,manager,3
+"Daily step goal: 80% achieved, keep going!",low,0.3384,unknown,0
+Reminder: submit your timesheet by EOD Friday,low,0.2913,unknown,0
+Pick up the dry cleaning on your way home.,low,0.1506,family,2
+just checking in!,low,0.097,peer,1
+lunch plans today?,low,0.0703,peer,1
+Just checking in!,low,0.3213,peer,1
+Heads up: client visiting office tomorrow.,medium,0.5615,manager,3
+Reminder: team lunch tomorrow.,low,0.1727,peer,1
+No action needed - just a status ping.,low,0.2819,peer,1
+"The staging environment is acting up, can you check?",medium,0.6091,peer,1
+Can you help debug this issue by EOD.,medium,0.5007,peer,1
+"URGENT: Investor call in 15 min, deck not loading, fix NOW!",high,0.8487,manager,3
+"URGENT: Server is down, customers can't login - call NOW",high,0.8535,peer,1
+roadmap discussion moved to this thursday,medium,0.5802,manager,3
+"critical path: if you don't merge this in 10 min, release fails",high,0.784,peer,1
+your account password expires in 3 days,medium,0.4597,unknown,0
+Your access request has been approved,medium,0.6132,unknown,0
+"Urgent: refund batch job failed, 500 customers affected!",high,0.8937,peer,1
+Deployment scheduled for 3pm today - just FYI.,medium,0.4167,peer,1
+your training course expires in 5 days,medium,0.627,unknown,0
+"Monthly report due this Friday, just a reminder",medium,0.5603,manager,3
+did you get my email from yesterday?,low,0.0704,peer,1
+the cafeteria has biryani today just saying,low,0.3051,peer,1
+Can you share the Q3 report before COB today?,medium,0.4119,manager,3
+"Hey, what's up?",low,0.2504,peer,1
+"client meeting moved to 4pm, please update your calendar",medium,0.3826,manager,3
+"hey, enjoyed the presentation today!",low,0.3231,peer,1
+Can you cover for me in the standup tomorrow.,medium,0.6535,peer,1
+your account password expires in 3 days,medium,0.5598,unknown,0
+"yo, free this evening?",low,0.0321,peer,1
+Emergency team call in 5 minutes - mandatory attendance!,high,0.8301,manager,3
+"Project update: everything's on track, no blockers.",low,0.1207,peer,1
+Your package has been delivered,low,0.1548,unknown,0
+your two-factor auth was just used from an unknown location,high,0.7063,unknown,0
+Database corruption detected - halt all writes immediately,high,0.8102,peer,1
+Your access request has been approved,medium,0.6739,unknown,0
+Did you watch the game last night?,low,0.3447,peer,1
+You're listed as emergency contact - please call hospital!,high,0.7662,unknown,0
+"CRITICAL PATH: If you don't merge this in 10 min, release fails!",high,0.9398,peer,1
+new company policy: please read and acknowledge,medium,0.5612,manager,3
+"marketing campaign going live thursday, review copy",medium,0.4128,peer,1
+"The staging environment is acting up, can you check.",medium,0.5784,peer,1
+"Server memory leak crashing every 10 min, need patch NOW",high,0.982,peer,1
+"breach: ssh keys exposed in public repo, rotate now",high,0.7608,peer,1
+can you share the q3 report before cob today?,medium,0.6059,manager,3
+team: please test the new feature in staging,medium,0.6409,manager,3
+Your subscription renews in 7 days,low,0.1462,unknown,0
+heads up: client visiting office tomorrow,medium,0.4074,manager,3
+bank flagged suspicious transaction on company account,high,0.7567,unknown,0
+"sos: i'm stuck in traffic, client meeting in 5 min, can you start?",high,0.8691,peer,1
+Please review the proposal before the meeting,medium,0.3852,peer,1
+Random thought: we should catch up sometime,low,0.0278,peer,1
+ALERT: Unauthorized access attempt on production,high,0.8353,unknown,0
+need your signature on the nda before eod,medium,0.4121,manager,3
+"project update: everything's on track, no blockers",low,0.1953,peer,1
+coffee later?,low,0.2026,peer,1
+are we still on for friday drinks?,low,0.3338,peer,1
+reminder: team lunch tomorrow,low,0.1922,peer,1
+"Hey, are you coming to the party.",low,0.2196,peer,1
+"CRITICAL: Payment gateway failing, losing transactions!",high,0.7383,peer,1
+Reminder: team lunch tomorrow.,low,0.0282,peer,1
+"Driver: your passenger has left belongings, urgent return",high,0.8003,unknown,0
+Can you send me that article you mentioned?,low,0.0367,peer,1
+"contract renewal is up for review, need your input",medium,0.4997,manager,3
+Team: code freeze is Thursday EOD.,medium,0.5301,manager,3
+Your package has been delivered.,low,0.2164,unknown,0
+bank flagged suspicious transaction on company account,high,0.895,unknown,0
+"SLA breach in 20 min if not resolved, client watching!",high,0.9453,manager,3
+Random thought: we should catch up sometime,low,0.0686,peer,1
+Interview scheduled for candidate tomorrow 2pm,medium,0.6457,manager,3
+"CRITICAL: Payment gateway failing, losing transactions",high,0.986,peer,1
+vendor payment pending your approval,medium,0.6801,manager,3
+"server memory leak crashing every 10 min, need patch now",high,0.8861,peer,1
+mom: beta call me now something happened to dad,high,0.7185,family,2
+Please respond to client's email from yesterday,medium,0.6589,manager,3
+"Monthly report due this Friday, just a reminder.",medium,0.6067,manager,3
+Your training course expires in 5 days.,medium,0.5685,unknown,0
+reminder: performance review cycle starts monday,medium,0.3921,manager,3
+"Updated design files shared, please review",medium,0.5629,peer,1
+Coffee later?,low,0.1288,peer,1
+Can you cover for me in the standup tomorrow.,medium,0.4863,peer,1
+Can you cover for me in the standup tomorrow.,medium,0.3853,peer,1
+Budget spreadsheet needs your sign-off this week.,medium,0.5019,manager,3
+"CRITICAL: Payment gateway failing, losing transactions",high,0.8502,peer,1
+"hey, enjoyed the presentation today!",low,0.0811,peer,1
+pick up the dry cleaning on your way home,low,0.0226,family,2
+Team: code freeze is Thursday EOD.,medium,0.4631,manager,3
+quick question - do you prefer chai or coffee?,low,0.1738,peer,1
+New blog post from your favourite author,low,0.1225,unknown,0
+"Updated design files shared, please review",medium,0.4406,peer,1
+Can you send me that article you mentioned.,low,0.3161,peer,1
+"asap: insurance claim deadline today 5pm, submit now",high,0.9625,unknown,0
+Final warning: approve the PR or we miss the release window,high,0.9776,peer,1
+don't forget mom's birthday next week,low,0.2065,family,2
+Database migration scheduled for tonight 11pm.,medium,0.3903,peer,1
+Your subscription renews in 7 days,low,0.2553,unknown,0
+"production cert expires in 45 minutes, renew now",high,0.7227,peer,1
+"Gas leak reported in the building, exit immediately",high,0.7477,unknown,0
+"Medical emergency at office, everyone please respond",high,0.8692,unknown,0
+Deal closing in 30 min - need sign-off or we lose it,high,0.9432,manager,3
+Happy Friday!,low,0.0591,peer,1
+quick question - do you prefer chai or coffee?,low,0.2441,peer,1
+Did you get my email from yesterday.,low,0.2682,peer,1
+"CRITICAL: Payment gateway failing, losing transactions",high,0.7816,peer,1
+Did you watch the game last night?,low,0.0509,peer,1
+"load balancer config change tonight, be aware",medium,0.373,peer,1
+Please update the JIRA ticket with your progress,medium,0.5535,peer,1
+Budget spreadsheet needs your sign-off this week,medium,0.4387,manager,3
+expense report needs to be submitted this week,medium,0.5351,unknown,0
+Weekend plans?,low,0.2949,family,2
+"Client meeting moved to 4pm, please update your calendar",medium,0.6523,manager,3
+You're listed as emergency contact - please call hospital!,high,0.8214,unknown,0
+"Daily step goal: 80% achieved, keep going!",low,0.0956,unknown,0
+Can you help debug this issue by EOD.,medium,0.6064,peer,1
+Database migration scheduled for tonight 11pm,medium,0.5383,peer,1
+"URGENT: Server is down, customers can't login - call NOW!",high,0.829,peer,1
+Security patch needs to be applied this week,medium,0.5597,peer,1
+weekly digest: top stories for you,low,0.1608,unknown,0
+can you send me that article you mentioned?,low,0.1247,peer,1
+Your training course expires in 5 days.,medium,0.476,unknown,0
+pr review needed before tomorrow's sprint demo,medium,0.4372,peer,1
+"Driver: your passenger has left belongings, urgent return!",high,0.9002,unknown,0
+"Hey, how's the new project going?",low,0.2828,peer,1
+reminder: performance review cycle starts monday,medium,0.3798,manager,3
+Deployment scheduled for 3pm today - just FYI,medium,0.6196,peer,1
+please review the proposal before the meeting,medium,0.4032,peer,1
+Team: please test the new feature in staging.,medium,0.4971,manager,3
+meme incoming 😂,low,0.062,peer,1
+"marketing campaign going live thursday, review copy",medium,0.6611,peer,1
+Reminder: gym session at 7am tomorrow,low,0.1703,peer,1
+"Contract renewal is up for review, need your input",medium,0.6109,manager,3
+"Happy birthday to Raj btw, don't forget to wish",low,0.2677,peer,1
+"airport: your flight departs in 40 min, proceed to gate",high,0.7181,unknown,0
+How was your weekend.,low,0.2793,peer,1
+Urgent: lawyer needs document signed in next 30 min,high,0.8319,manager,3
+ALERT: Unauthorized access attempt on production,high,0.8839,unknown,0
+"urgent: wrong data pushed to 10k users, recall now",high,0.8486,peer,1
+new ticket assigned to you: medium priority,medium,0.5073,unknown,0
+production is down. repeat: prod is down. all hands now,high,0.7141,peer,1
+"critical path: if you don't merge this in 10 min, release fails",high,0.8239,peer,1
+Don't forget mom's birthday next week.,low,0.2516,family,2
+Can you send me that article you mentioned.,low,0.3275,peer,1
+"critical: payment gateway failing, losing transactions",high,0.8629,peer,1
+"SLA breach in 20 min if not resolved, client watching!",high,0.7337,manager,3
+"urgent: refund batch job failed, 500 customers affected",high,0.8916,peer,1
+"Yo, free this evening.",low,0.1852,peer,1
+lunch plans today?,low,0.2028,peer,1
+"Project update: everything's on track, no blockers.",low,0.0379,peer,1
+"candidate background check cleared, offer going out",medium,0.6496,manager,3
+network switch failure - entire floor is offline,high,0.8213,peer,1
+"Call me RIGHT NOW, something went wrong with the release!",high,0.9701,manager,3
+"Marketing campaign going live Thursday, review copy",medium,0.5172,peer,1
+No action needed - just a status ping,low,0.3009,peer,1
+API rate limits hit 80% - keep an eye on it.,medium,0.5919,peer,1
+"CRITICAL PATH: If you don't merge this in 10 min, release fails",high,0.7197,peer,1
+"Urgent: refund batch job failed, 500 customers affected!",high,0.9338,peer,1
+security patch needs to be applied this week,medium,0.5696,peer,1
+"yo, free this evening?",low,0.0745,peer,1
+"Ambulance called, Priya collapsed in office, please come!",high,0.8647,peer,1
+Vendor payment pending your approval.,medium,0.633,manager,3
+heads up: client visiting office tomorrow,medium,0.4864,manager,3
+The cafeteria has biryani today just saying.,low,0.1259,peer,1
+"Client meeting moved to 4pm, please update your calendar",medium,0.5258,manager,3
+FYI - office is closing early Friday.,low,0.1283,peer,1
+"asap: insurance claim deadline today 5pm, submit now",high,0.8825,unknown,0
+deal closing in 30 min - need sign-off or we lose it,high,0.81,manager,3
+Coffee later?,low,0.1073,peer,1
+"ASAP: Security breach detected, isolate the system",high,0.726,peer,1
+"marketing campaign going live thursday, review copy",medium,0.411,peer,1
+random thought: we should catch up sometime,low,0.0692,peer,1
+"Yo, free this evening?",low,0.2417,peer,1
+your access request has been approved,medium,0.467,unknown,0
+"Grocery list: milk, eggs, bread",low,0.1963,family,2
+"Marketing campaign going live Thursday, review copy.",medium,0.5927,peer,1
+Are we still on for Friday drinks?,low,0.1041,peer,1
+Team: please fill in the availability form by Thursday.,medium,0.6444,manager,3
+alert: unauthorized access attempt on production,high,0.7926,unknown,0
+Deployment scheduled for 3pm today - just FYI.,medium,0.4312,peer,1
+your child's school: please call urgently,high,0.9616,unknown,0
+"ceo needs the numbers in 10 minutes, send immediately",high,0.8665,manager,3
+please update the jira ticket with your progress,medium,0.4688,peer,1
+Draft the SOW and share for review by tomorrow,medium,0.3897,peer,1
+Feature flag needs to be enabled before release.,medium,0.6859,peer,1
+Feature flag needs to be enabled before release,medium,0.6568,peer,1
+"Dinner at 8pm, let me know.",low,0.2409,family,2
+"Monthly report due this Friday, just a reminder",medium,0.6118,manager,3
+production is down. repeat: prod is down. all hands now,high,0.7174,peer,1
+Please confirm your availability for client call.,medium,0.4378,manager,3
+pr review needed before tomorrow's sprint demo,medium,0.6144,peer,1
+"new hire starting monday, please prepare onboarding",medium,0.6108,manager,3
+"asap: insurance claim deadline today 5pm, submit now",high,0.8866,unknown,0
+your access request has been approved,medium,0.472,unknown,0
+Are we still on for Friday drinks?,low,0.1735,peer,1
+survey: rate your experience with us,low,0.1292,unknown,0
+just checking in!,low,0.0424,peer,1
+Quick question - do you prefer chai or coffee.,low,0.0713,peer,1
+Good morning.,low,0.1243,family,2
+Can you hop on a quick call sometime today.,medium,0.6155,manager,3
+"Bro the server is literally on fire, call me now!",high,0.899,peer,1
+Can you help debug this issue by EOD.,medium,0.4404,peer,1
+Urgent: lawyer needs document signed in next 30 min!,high,0.8625,manager,3
+"new project kicking off monday, you're assigned",medium,0.4807,manager,3
+"medical emergency at office, everyone please respond",high,0.7213,unknown,0
+"final: board presentation in 8 minutes, file won't open",high,0.7489,manager,3
+Heads up: client visiting office tomorrow,medium,0.3686,manager,3
+please send me your part of the slides by 5pm,medium,0.5044,peer,1
+have you tried that new restaurant?,low,0.312,peer,1
+Your account password expires in 3 days,medium,0.4568,unknown,0
+Please update the JIRA ticket with your progress,medium,0.4464,peer,1
+"Happy birthday to Raj btw, don't forget to wish.",low,0.243,peer,1
+"new project kicking off monday, you're assigned",medium,0.3865,manager,3
+"Building fire alarm triggered, evacuate immediately!",high,0.9388,unknown,0
+"Final: board presentation in 8 minutes, file won't open",high,0.7352,manager,3
+"hey, how's the new project going?",low,0.3104,peer,1
+Urgent: lawyer needs document signed in next 30 min!,high,0.8887,manager,3
+just checking in!,low,0.0903,peer,1
+"Hey, enjoyed the presentation today!",low,0.3398,peer,1
+"Bro the server is literally on fire, call me now",high,0.845,peer,1
+Team: please fill in the availability form by Thursday,medium,0.6169,manager,3
+Budget spreadsheet needs your sign-off this week.,medium,0.5569,manager,3
+Team: please test the new feature in staging.,medium,0.687,manager,3
+"ceo needs the numbers in 10 minutes, send immediately",high,0.8292,manager,3
+DEADLINE: Submit the report in the next 20 minutes or we lose the contract,high,0.7634,manager,3
+"Server memory leak crashing every 10 min, need patch NOW",high,0.7261,peer,1
+"load balancer config change tonight, be aware",medium,0.6639,peer,1
+"Medical emergency at office, everyone please respond",high,0.7756,unknown,0
+when are you free for a quick catch-up call?,low,0.1518,peer,1
+Expense report needs to be submitted this week.,medium,0.4432,unknown,0
+"The staging environment is acting up, can you check?",medium,0.5878,peer,1
+Mom: beta CALL ME NOW something happened to dad!,high,0.7379,family,2
+"Fraud alert: unusual activity on your account, call bank!",high,0.9652,unknown,0
+database corruption detected - halt all writes immediately,high,0.8634,peer,1
+"Power outage in datacenter, backup failing",high,0.9182,peer,1
+Please respond to client's email from yesterday.,medium,0.6346,manager,3
+please review the proposal before the meeting,medium,0.3878,peer,1
+"New project kicking off Monday, you're assigned",medium,0.4473,manager,3
+Team: code freeze is Thursday EOD,medium,0.6369,manager,3
+"New project kicking off Monday, you're assigned",medium,0.4068,manager,3
+heads up: client visiting office tomorrow,medium,0.4975,manager,3
+"standby for oncall this weekend, you're primary",medium,0.595,manager,3
+are we still on for friday drinks?,low,0.176,peer,1
+Your access request has been approved,medium,0.6898,unknown,0
+"Call me RIGHT NOW, something went wrong with the release!",high,0.7938,manager,3
+"The staging environment is acting up, can you check?",medium,0.6795,peer,1
+"Call me RIGHT NOW, something went wrong with the release",high,0.8142,manager,3
+survey: rate your experience with us,low,0.2413,unknown,0
+"System alert: CPU at 99% for 15 min, intervention needed",high,0.7687,unknown,0
