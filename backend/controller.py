@@ -952,3 +952,188 @@ class SignalBriefController:
             ],
         }
 
+    def retriage_deferred_queue(self) -> dict[str, Any]:
+        """
+        Re-evaluate ALL messages in the deferred queue against CURRENT preferences.
+
+        Called immediately after the user saves new preferences so that:
+        - Newly whitelisted senders → WHITELIST_OVERRIDE → promoted to delivered
+        - Decreased defer_threshold → some held messages now reach deliver zone
+        - Changed DND window → messages that were held by old DND may now deliver
+
+        Returns a summary of what was promoted, held, and the new triage actions.
+        """
+        promoted: list[dict[str, Any]] = []
+        still_held: list[dict[str, Any]] = []
+
+        # Get current vehicle context for signal quality
+        if self._vehicle_state is not None:
+            signal_quality = self._vehicle_state.signal_quality
+            is_driving = self._vehicle_state.is_driving
+            speed_kmh = self._vehicle_state.speed_kmh
+            in_coverage_zone = self._vehicle_state.in_coverage_zone
+            is_work_hours = self._vehicle_state.is_work_hours
+            hour_of_day = self._vehicle_state.hour_of_day
+        else:
+            state = _ctx_engine.current()
+            signal_quality = state.signal_quality
+            is_driving = state.is_driving
+            speed_kmh = state.speed_kmh
+            in_coverage_zone = state.in_coverage_zone
+            is_work_hours = state.is_work_hours
+            hour_of_day = state.hour_of_day
+
+        signal_offline = signal_quality < 0.05
+
+        # Collect all currently deferred messages (both in queue + in _messages)
+        deferred_msgs = [m for m in self._messages if m.status in ("deferred", "received", "classified")]
+        promoted_ids: set[str] = set()
+
+        for msg in deferred_msgs:
+            # Rebuild feature vector with latest prefs
+            sender_tier = _prefs.get_sender_tier(msg.sender)
+            user_weight = _prefs.get_sender_weight(msg.sender)
+            keyword_count = _prefs.count_urgent_keywords(msg.text)
+
+            # Use stored urgency_score if available, else approximate from priority
+            urgency_score: float
+            if hasattr(msg, "urgency_score") and msg.urgency_score is not None:  # type: ignore[attr-defined]
+                urgency_score = float(msg.urgency_score)  # type: ignore[attr-defined]
+            else:
+                priority_to_urgency = {"urgent": 0.80, "actionable": 0.55, "informational": 0.30, "ignore": 0.10}
+                urgency_score = priority_to_urgency.get(msg.priority, 0.30)
+
+            features = MessageFeatureVector(
+                urgency_score=urgency_score,
+                sender_tier=sender_tier,
+                user_weight=user_weight,
+                signal_quality=signal_quality,
+                in_coverage_zone=in_coverage_zone,
+                is_work_hours=is_work_hours,
+                is_driving=is_driving,
+                speed_kmh=speed_kmh,
+                keyword_count=keyword_count,
+                hour_of_day=hour_of_day,
+                triage_score=0.0,  # will be recomputed
+            )
+            features.triage_score = compute_triage_score(features)
+
+            result = apply_triage_rules(
+                features=features,
+                message_id=msg.id,
+                sender=msg.sender,
+                text=msg.text,
+                signal_offline=signal_offline,
+                prefs=_prefs,
+            )
+
+            old_action = getattr(msg, "triage_action", "HOLD_FOR_DIGEST") or "HOLD_FOR_DIGEST"
+            new_action = result.action
+
+            # Update stored metadata on the message
+            msg.triage_score = result.triage_score  # type: ignore[attr-defined]
+            msg.triage_action = new_action  # type: ignore[attr-defined]
+            msg.decision_reason = result.reason
+
+            deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
+
+            if new_action in deliver_actions:
+                msg.status = "delivered"
+                # Remove from deferred queue if present
+                _deferred_queue.remove(msg.id)
+                promoted_ids.add(msg.id)
+                promoted.append({
+                    "id": msg.id,
+                    "sender": msg.sender,
+                    "preview": msg.text[:60],
+                    "old_action": old_action,
+                    "new_action": new_action,
+                    "triage_score": result.triage_score,
+                    "reason": result.reason,
+                })
+                # Log the re-triage decision
+                self._decision_log.append(result.log_entry)
+            else:
+                still_held.append({
+                    "id": msg.id,
+                    "sender": msg.sender,
+                    "triage_score": result.triage_score,
+                    "new_action": new_action,
+                })
+
+        return {
+            "evaluated": len(deferred_msgs),
+            "promoted_count": len(promoted),
+            "still_held_count": len(still_held),
+            "promoted": promoted,
+            "still_held": still_held,
+        }
+
+    def preview_retriage_impact(self) -> dict[str, Any]:
+        """
+        Dry-run retriage — returns how many messages WOULD be promoted if
+        current prefs were applied, without actually changing any status.
+        Used by the frontend to show 'X messages would be unlocked'.
+        """
+        if self._vehicle_state is not None:
+            signal_quality = self._vehicle_state.signal_quality
+            is_driving = self._vehicle_state.is_driving
+            speed_kmh = self._vehicle_state.speed_kmh
+            in_coverage_zone = self._vehicle_state.in_coverage_zone
+            is_work_hours = self._vehicle_state.is_work_hours
+            hour_of_day = self._vehicle_state.hour_of_day
+        else:
+            state = _ctx_engine.current()
+            signal_quality = state.signal_quality
+            is_driving = state.is_driving
+            speed_kmh = state.speed_kmh
+            in_coverage_zone = state.in_coverage_zone
+            is_work_hours = state.is_work_hours
+            hour_of_day = state.hour_of_day
+
+        signal_offline = signal_quality < 0.05
+        deferred_msgs = [m for m in self._messages if m.status in ("deferred", "received", "classified")]
+        would_promote = 0
+        would_hold = 0
+        deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
+
+        for msg in deferred_msgs:
+            sender_tier = _prefs.get_sender_tier(msg.sender)
+            user_weight = _prefs.get_sender_weight(msg.sender)
+            keyword_count = _prefs.count_urgent_keywords(msg.text)
+            priority_to_urgency = {"urgent": 0.80, "actionable": 0.55, "informational": 0.30, "ignore": 0.10}
+            urgency_score = priority_to_urgency.get(msg.priority, 0.30)
+            features = MessageFeatureVector(
+                urgency_score=urgency_score,
+                sender_tier=sender_tier,
+                user_weight=user_weight,
+                signal_quality=signal_quality,
+                in_coverage_zone=in_coverage_zone,
+                is_work_hours=is_work_hours,
+                is_driving=is_driving,
+                speed_kmh=speed_kmh,
+                keyword_count=keyword_count,
+                hour_of_day=hour_of_day,
+                triage_score=0.0,
+            )
+            features.triage_score = compute_triage_score(features)
+            result = apply_triage_rules(
+                features=features,
+                message_id=msg.id,
+                sender=msg.sender,
+                text=msg.text,
+                signal_offline=signal_offline,
+                prefs=_prefs,
+            )
+            if result.action in deliver_actions:
+                would_promote += 1
+            else:
+                would_hold += 1
+
+        return {
+            "total_deferred": len(deferred_msgs),
+            "would_promote": would_promote,
+            "would_hold": would_hold,
+        }
+
+

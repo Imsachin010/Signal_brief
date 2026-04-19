@@ -22,8 +22,9 @@ from typing import Any
 
 log = logging.getLogger(__name__)
 
-# ── Persistence path ──────────────────────────────────────────────────────────
-_PREFS_FILE = Path(__file__).parent / "prefs.json"
+# ── Persistence paths ─────────────────────────────────────────────────────────
+_PREFS_FILE   = Path(__file__).parent / "prefs.json"
+_HISTORY_FILE = Path(__file__).parent / "pref_history.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Sender Tier Map: pattern substring → tier (0=unknown … 4=whitelist)
@@ -121,6 +122,37 @@ class PreferencesManager:
         except Exception as exc:
             log.warning("Could not save prefs.json: %s", exc)
 
+    def _log_change(self, summary: str, changed_fields: list[str]) -> None:
+        """Append one entry to pref_history.json (capped at 200 entries)."""
+        entry = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "summary": summary,
+            "changed_fields": changed_fields,
+        }
+        history: list[dict] = []
+        if _HISTORY_FILE.exists():
+            try:
+                history = json.loads(_HISTORY_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                history = []
+        history.append(entry)
+        # Keep tail — avoid unbounded growth
+        history = history[-200:]
+        try:
+            _HISTORY_FILE.write_text(json.dumps(history, indent=2), encoding="utf-8")
+        except Exception as exc:
+            log.warning("Could not write pref_history.json: %s", exc)
+
+    def get_history(self, limit: int = 30) -> list[dict]:
+        """Return the most recent `limit` preference change entries (newest first)."""
+        if not _HISTORY_FILE.exists():
+            return []
+        try:
+            history: list[dict] = json.loads(_HISTORY_FILE.read_text(encoding="utf-8"))
+            return list(reversed(history[-limit:]))
+        except Exception:
+            return []
+
     # ── CRUD ─────────────────────────────────────────────────────────────────
 
     def get(self) -> UserPreferences:
@@ -129,57 +161,78 @@ class PreferencesManager:
     def update(self, partial: dict[str, Any]) -> None:
         """
         Merge a partial update dict into current preferences and persist.
-
-        Accepted keys
-        -------------
-        sender_weights          dict[str,float]  — merged (not replaced)
-        sender_weights_replace  dict[str,float]  — full replacement
-        whitelist               list[str]        — full replacement
-        whitelist_add           list[str]        — append items
-        whitelist_remove        list[str]        — remove items
-        dnd_windows             list[[int,int]]  — full replacement
-        defer_threshold         float
-        deliver_threshold       float
-        driving_speed_threshold_kmh  float
+        Also appends a timestamped entry to pref_history.json.
         """
         p = self._prefs
+        changed_fields: list[str] = []
+        summaries: list[str] = []
 
-        # Sender weights — merge by default, replace if key says so
         if "sender_weights_replace" in partial:
             p.sender_weights = {k: float(v) for k, v in partial["sender_weights_replace"].items()}
+            changed_fields.append("sender_weights")
+            summaries.append(f"Sender weights replaced ({len(p.sender_weights)} entries)")
         elif "sender_weights" in partial:
             for k, v in partial["sender_weights"].items():
                 p.sender_weights[k.lower()] = float(v)
+            changed_fields.append("sender_weights")
+            summaries.append(f"Sender weights updated: {list(partial['sender_weights'].keys())}")
 
-        # Whitelist — three modes
         if "whitelist" in partial:
-            # Full replacement (what PreferencesPanel sends)
+            old = set(p.whitelist)
             p.whitelist = list(partial["whitelist"])
+            added = sorted(set(p.whitelist) - old)
+            removed = sorted(old - set(p.whitelist))
+            changed_fields.append("whitelist")
+            parts = []
+            if added:   parts.append(f"added {added}")
+            if removed: parts.append(f"removed {removed}")
+            summaries.append("Whitelist: " + (" | ".join(parts) or "no change"))
         if "whitelist_add" in partial:
             existing = {w.lower() for w in p.whitelist}
-            for name in partial["whitelist_add"]:
-                if name.lower() not in existing:
-                    p.whitelist.append(name)
-                    existing.add(name.lower())
+            newly = [n for n in partial["whitelist_add"] if n.lower() not in existing]
+            for name in newly:
+                p.whitelist.append(name)
+            if newly:
+                changed_fields.append("whitelist")
+                summaries.append(f"Whitelist: added {newly}")
         if "whitelist_remove" in partial:
             remove_lower = {n.lower() for n in partial["whitelist_remove"]}
+            before = set(p.whitelist)
             p.whitelist = [w for w in p.whitelist if w.lower() not in remove_lower]
+            removed = sorted(before - set(p.whitelist))
+            if removed:
+                changed_fields.append("whitelist")
+                summaries.append(f"Whitelist: removed {removed}")
 
         if "dnd_windows" in partial:
             p.dnd_windows = [tuple(w) for w in partial["dnd_windows"]]  # type: ignore[misc]
+            changed_fields.append("dnd_windows")
+            summaries.append(f"DND windows set to {p.dnd_windows}")
         if "defer_threshold" in partial:
+            old = p.defer_threshold
             p.defer_threshold = float(partial["defer_threshold"])
+            changed_fields.append("defer_threshold")
+            summaries.append(f"Defer threshold: {old:.2f} → {p.defer_threshold:.2f}")
         if "deliver_threshold" in partial:
+            old = p.deliver_threshold
             p.deliver_threshold = float(partial["deliver_threshold"])
+            changed_fields.append("deliver_threshold")
+            summaries.append(f"Deliver threshold: {old:.2f} → {p.deliver_threshold:.2f}")
         if "driving_speed_threshold_kmh" in partial:
+            old = p.driving_speed_threshold_kmh
             p.driving_speed_threshold_kmh = float(partial["driving_speed_threshold_kmh"])
+            changed_fields.append("driving_speed_threshold_kmh")
+            summaries.append(f"Driving threshold: {old:.0f} → {p.driving_speed_threshold_kmh:.0f} km/h")
 
         self._save()
+        if changed_fields:
+            self._log_change(" | ".join(summaries) or "No changes", changed_fields)
 
     def reset_to_defaults(self) -> None:
         """Wipe prefs.json and reload defaults."""
         self._prefs = UserPreferences()
         self._save()
+        self._log_change("All preferences reset to protocol defaults", ["all"])
 
     # ── Queries ──────────────────────────────────────────────────────────────
 

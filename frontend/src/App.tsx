@@ -435,7 +435,6 @@ export default function App() {
                           <div className="message-main">
                             <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.3rem", flexWrap: "wrap" }}>
                               <strong>{msg.sender}</strong>
-                              <span className={`priority-badge ${msg.priority}`}>{priorityLabel(msg.priority)}</span>
                               {msg.triage_score !== undefined && (
                                 <span className="triage-score-inline">score {msg.triage_score.toFixed(3)}</span>
                               )}

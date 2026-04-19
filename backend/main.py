@@ -223,6 +223,36 @@ async def reset_preferences() -> dict:
     return _p.to_dict()
 
 
+@app.post("/api/preferences/retriage")
+async def retriage_queue() -> dict:
+    """
+    Re-evaluate all deferred/held messages against the CURRENT preferences.
+    Call this immediately after saving preferences to apply them to the queue.
+    - Newly whitelisted senders → promoted to delivered
+    - Lower deliver_threshold → some held messages now score above the gate
+    """
+    return controller.retriage_deferred_queue()
+
+
+@app.get("/api/preferences/retriage/preview")
+async def preview_retriage() -> dict:
+    """
+    Dry-run: returns how many held messages WOULD be promoted
+    if current prefs were applied, without changing any state.
+    """
+    return controller.preview_retriage_impact()
+
+
+@app.get("/api/preferences/history")
+async def get_preference_history() -> dict:
+    """
+    Return the preference change changelog (newest first).
+    Each entry has: timestamp, summary, changed_fields.
+    """
+    from .personalization import preferences as _p
+    return {"history": _p.get_history(limit=50)}
+
+
 # ---- Simulation & Route Endpoints -------------------------------------------
 
 @app.post("/api/simulate/step")
