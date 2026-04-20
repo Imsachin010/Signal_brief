@@ -3,6 +3,8 @@
 > **An AI-powered, context-aware notification triage engine for in-vehicle use**, built as a full-stack local system with a real-time HMI dashboard, a 5-component triage score, ML-based urgency classification, geo-zone routing, and persistent user preferences.
 
 ---
+![alt text](image.png)
+---
 
 ## Table of Contents
 
