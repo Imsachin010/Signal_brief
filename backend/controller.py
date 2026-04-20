@@ -236,6 +236,16 @@ class SignalBriefController:
                 location_status="live",
             )
             self._context = context
+            
+            # Synchronize the simulated vehicle state so the intelligence engine reads the requested demo signal
+            if self._vehicle_state is not None:
+                self._vehicle_state.signal_quality = signal_strength / 100.0
+            else:
+                from .context_engine import _ctx_engine
+                _ctx_engine.current().signal_quality = signal_strength / 100.0
+
+        # Crucial step: actually re-evaluate the queue now that the signal has changed!
+        self.retriage_deferred_queue()
 
         await self._publish("context.updated", {"context": to_dict(context)})
         await self._publish("queue.updated", {"message_count": len(self._messages)})
@@ -346,8 +356,9 @@ class SignalBriefController:
         # Build feature vector from ML classification + context + prefs
         signal_quality = context.signal_strength / 100.0
         is_offline = context.signal_strength <= 5 or context.signal_band == "low"
-        from datetime import datetime, timezone as _tz
-        current_hour = datetime.now(_tz.utc).hour
+        from datetime import datetime, timezone as _tz, timedelta
+        india_tz = _tz(timedelta(hours=5, minutes=30))
+        current_hour = datetime.now(india_tz).hour
         is_work_hours = 9 <= current_hour < 18
 
         # Extract urgency_score from classification reason (set by ONNX path)
@@ -385,6 +396,7 @@ class SignalBriefController:
             in_coverage_zone=context.signal_band != "low",
             is_driving=False,
             is_work_hours=is_work_hours,
+            hour_of_day=current_hour,
         )
         features.triage_score = compute_triage_score(features)
 
@@ -869,21 +881,11 @@ class SignalBriefController:
         (Note: runs outside the asyncio lock -- do not await here)
         """
         if event.should_flush_queue and not _deferred_queue.is_empty():
-            if event.to_zone in ("GREEN", "YELLOW"):
-                result = _deferred_queue.flush(trigger_reason=event.flush_reason)
-            else:
-                result = _deferred_queue.flush_critical_only(
-                    trigger_reason=event.flush_reason
-                )
-
-            # Mark flushed messages as delivered in _messages list
-            immediate_ids = {m.message_id for m in result.immediate}
-            for msg in self._messages:
-                if msg.id in immediate_ids and msg.status == "deferred":
-                    msg.status = "delivered"
-                    msg.decision_reason = (
-                        f"Flushed on zone recovery: {event.from_zone} -> {event.to_zone}"
-                    )
+            # Run the entire deferred queue back through the full intelligence layer.
+            # Because signal quality has improved, our new dynamic threshold scaling 
+            # will naturally promote all messages that now qualify, completely 
+            # circumventing the old artificial caps (like max 1 or 3 per flush)!
+            self.retriage_deferred_queue()
 
         if event.should_hold_messages:
             # Future messages will go to queue -- no action needed here
@@ -936,6 +938,9 @@ class SignalBriefController:
 
     def flush_queue_manually(self) -> dict[str, Any]:
         """Manually trigger a queue flush (for testing or manual override)."""
+        # Instead of arbitrarily forcing the legacy hard limit logic, 
+        # let's trigger a full AI retriage to force evaluation.
+        # But wait, manual flush implies FORCE everything to delivered. 
         result = _deferred_queue.flush(trigger_reason="manual_flush")
         immediate_ids = {m.message_id for m in result.immediate}
         for msg in self._messages:
@@ -1035,7 +1040,7 @@ class SignalBriefController:
             msg.triage_action = new_action  # type: ignore[attr-defined]
             msg.decision_reason = result.reason
 
-            deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
+            deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "KEYWORD_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
 
             if new_action in deliver_actions:
                 msg.status = "delivered"
@@ -1095,7 +1100,7 @@ class SignalBriefController:
         deferred_msgs = [m for m in self._messages if m.status in ("deferred", "received", "classified")]
         would_promote = 0
         would_hold = 0
-        deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
+        deliver_actions = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "KEYWORD_OVERRIDE", "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE"}
 
         for msg in deferred_msgs:
             sender_tier = _prefs.get_sender_tier(msg.sender)

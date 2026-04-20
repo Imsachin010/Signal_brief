@@ -260,7 +260,72 @@ export default function App() {
   const tone = signalTone(snapshot.context.signal_strength);
   const visibleMessages = snapshot.messages
     .filter((m) => displayStatus(m.status) !== "ignored")
-    .slice().reverse();
+    .map((m, i) => ({ ...m, _original_index: i }))
+    .sort((a, b) => {
+      const aScore = a.triage_score ?? -1;
+      const bScore = b.triage_score ?? -1;
+      if (aScore !== bScore) return bScore - aScore;
+      return b._original_index - a._original_index;
+    });
+
+  const receivedMessages = visibleMessages.filter((m) => ["delivered", "summarized"].includes(displayStatus(m.status)));
+  const pendingMessages = visibleMessages.filter((m) => displayStatus(m.status) === "pending");
+
+  const renderMessageCard = (msg: Message) => {
+    const st = displayStatus(msg.status);
+    const sug = suggestions.get(msg.id);
+    const sentText = sentReplies.get(msg.id);
+    return (
+      <div className="message-row" key={msg.id}>
+        <div className="message-main">
+          <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.3rem", flexWrap: "wrap" }}>
+            <strong>{msg.sender}</strong>
+            {msg.triage_score !== undefined && (
+              <span className="triage-score-inline">score {msg.triage_score.toFixed(3)}</span>
+            )}
+            {msg.triage_action && (
+              <span className="triage-action-inline">{msg.triage_action.replace(/_/g, " ")}</span>
+            )}
+          </div>
+          <p>{msg.text}</p>
+          {sug && sug !== "loading" && (
+            <div className="suggestion-card">
+              <div className="suggestion-header">
+                <span className="suggestion-label">Suggestion</span>
+                <span className={`suggestion-tone tone-${sug.tone}`}>{sug.tone}</span>
+                <button className="suggestion-dismiss"
+                  onClick={() => setSuggestions((p) => { const n = new Map(p); n.delete(msg.id); return n; })}>x</button>
+              </div>
+              <p className="suggestion-text">{sug.text}</p>
+              <div className="suggestion-actions">
+                <button className="suggestion-send-btn"
+                  onClick={() => { setSentReplies((p) => new Map(p).set(msg.id, sug.text)); setSuggestions((p) => { const n = new Map(p); n.delete(msg.id); return n; }); }}>
+                  Send
+                </button>
+              </div>
+            </div>
+          )}
+          {sentText && (
+            <div className="sent-reply-preview">
+              <span className="sent-reply-label">Sent</span>
+              <span className="sent-reply-text">{sentText}</span>
+            </div>
+          )}
+        </div>
+        <div className="message-meta">
+          <span className={`status-badge ${st}`}>{st === "delivered" ? "received" : st}</span>
+          <small>{fmtTime(msg.received_at)}</small>
+          {!sentText && msg.needs_reply && !sug && (
+            <button className="suggestion-btn" disabled={sug === "loading" || controlsDisabled}
+              onClick={() => void fetchSuggestion(msg.id)}>
+              {sug === "loading" ? "..." : "Suggest Reply"}
+            </button>
+          )}
+          {sentText && <span className="replied-badge">Replied</span>}
+        </div>
+      </div>
+    );
+  };
 
   // ── Render ──
   return (
@@ -425,62 +490,26 @@ export default function App() {
                 {visibleMessages.length === 0 ? (
                   <div className="empty-state">Run the demo to populate messages.</div>
                 ) : (
-                  <div className="message-list">
-                    {visibleMessages.map((msg) => {
-                      const st = displayStatus(msg.status);
-                      const sug = suggestions.get(msg.id);
-                      const sentText = sentReplies.get(msg.id);
-                      return (
-                        <div className="message-row" key={msg.id}>
-                          <div className="message-main">
-                            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "0.3rem", flexWrap: "wrap" }}>
-                              <strong>{msg.sender}</strong>
-                              {msg.triage_score !== undefined && (
-                                <span className="triage-score-inline">score {msg.triage_score.toFixed(3)}</span>
-                              )}
-                              {msg.triage_action && (
-                                <span className="triage-action-inline">{msg.triage_action.replace(/_/g, " ")}</span>
-                              )}
-                            </div>
-                            <p>{msg.text}</p>
-                            {sug && sug !== "loading" && (
-                              <div className="suggestion-card">
-                                <div className="suggestion-header">
-                                  <span className="suggestion-label">Suggestion</span>
-                                  <span className={`suggestion-tone tone-${sug.tone}`}>{sug.tone}</span>
-                                  <button className="suggestion-dismiss"
-                                    onClick={() => setSuggestions((p) => { const n = new Map(p); n.delete(msg.id); return n; })}>x</button>
-                                </div>
-                                <p className="suggestion-text">{sug.text}</p>
-                                <div className="suggestion-actions">
-                                  <button className="suggestion-send-btn"
-                                    onClick={() => { setSentReplies((p) => new Map(p).set(msg.id, sug.text)); setSuggestions((p) => { const n = new Map(p); n.delete(msg.id); return n; }); }}>
-                                    Send
-                                  </button>
-                                </div>
-                              </div>
-                            )}
-                            {sentText && (
-                              <div className="sent-reply-preview">
-                                <span className="sent-reply-label">Sent</span>
-                                <span className="sent-reply-text">{sentText}</span>
-                              </div>
-                            )}
-                          </div>
-                          <div className="message-meta">
-                            <span className={`status-badge ${st}`}>{st}</span>
-                            <small>{fmtTime(msg.received_at)}</small>
-                            {!sentText && msg.needs_reply && !sug && (
-                              <button className="suggestion-btn" disabled={sug === "loading" || controlsDisabled}
-                                onClick={() => void fetchSuggestion(msg.id)}>
-                                {sug === "loading" ? "..." : "Suggest Reply"}
-                              </button>
-                            )}
-                            {sentText && <span className="replied-badge">Replied</span>}
-                          </div>
+                  <div className="message-list-container">
+                    {receivedMessages.length > 0 && (
+                      <div className="message-section">
+                        <h3 className="section-divider">Received / Immediate Priority</h3>
+                        <div className="message-list">
+                          {receivedMessages.map(renderMessageCard)}
                         </div>
-                      );
-                    })}
+                      </div>
+                    )}
+                    
+                    {pendingMessages.length > 0 && (
+                      <div className="message-section">
+                        <h3 className="section-divider" style={{ marginTop: receivedMessages.length > 0 ? "1.5rem" : 0 }}>
+                          Deferred Queue / Moderate Priority
+                        </h3>
+                        <div className="message-list">
+                          {pendingMessages.map(renderMessageCard)}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </article>

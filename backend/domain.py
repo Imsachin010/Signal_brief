@@ -31,6 +31,7 @@ TriageAction = Literal[
     "DEFER_TO_ZONE",
     "HOLD_FOR_DIGEST",
     "WHITELIST_OVERRIDE",
+    "KEYWORD_OVERRIDE",
     "FALLBACK_VIBRATE",
     "FLUSH_DIGEST",
 ]
@@ -163,6 +164,7 @@ class MessageFeatureVector:
     in_coverage_zone: bool
     is_driving: bool
     is_work_hours: bool
+    hour_of_day: int = 12
 
     # Derived (computed by compute_triage_score)
     triage_score: float = 0.0

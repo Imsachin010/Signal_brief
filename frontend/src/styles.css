@@ -2003,3 +2003,16 @@ button:disabled {
   text-transform: uppercase;
   background: transparent;
 }
+
+/* ── Message Section Headers ── */
+.section-divider {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+  font-weight: 600;
+}

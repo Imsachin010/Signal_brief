@@ -57,6 +57,7 @@ _URGENT_KEYWORDS: frozenset[str] = frozenset({
     "right now", "call me now", "call now", "on fire", "breach",
     "hack", "ransomware", "alert", "escalation", "p0", "p1",
     "production down", "prod down", "failure", "fire", "evacuate",
+    "hospital", "hospitalised", "hospitalized", "accident", "injured"
 })
 
 
@@ -280,7 +281,9 @@ class PreferencesManager:
 
     def to_dict(self) -> dict[str, Any]:
         p = self._prefs
-        hour = datetime.now(timezone.utc).hour
+        from datetime import timezone, timedelta
+        india_tz = timezone(timedelta(hours=5, minutes=30))
+        hour = datetime.now(india_tz).hour
         return {
             "sender_weights": dict(p.sender_weights),
             "whitelist": sorted(p.whitelist),

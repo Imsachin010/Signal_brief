@@ -81,10 +81,10 @@ def decide(classification: Classification, context: ContextState) -> Decision:
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Protocol weights (must sum to 1.0)
-_W_URGENCY  = 0.40
+_W_URGENCY  = 0.10
 _W_SENDER   = 0.25
 _W_SIGNAL   = 0.15
-_W_CONTEXT  = 0.10
+_W_CONTEXT  = 0.40
 _W_KEYWORD  = 0.10
 
 
@@ -196,8 +196,21 @@ def apply_triage_rules(
             features=features,
         )
 
+    # ── RULE 2b: Critical keywords bypass everything ─────────────────────
+    if features.keyword_count > 0:
+        return _result(
+            "KEYWORD_OVERRIDE",
+            "Message contains a highly critical keyword (e.g. hospital, emergency).",
+            override=True,
+            score=score,
+            msg_id=message_id,
+            sender=sender,
+            text=text,
+            features=features,
+        )
+
     # ── RULE 3: DND window — only whitelist passes (already handled above) ─
-    if prefs.is_in_dnd():
+    if prefs.is_in_dnd(features.hour_of_day):
         return _result(
             "HOLD_FOR_DIGEST",
             "DND window active — holding for digest.",
@@ -248,10 +261,18 @@ def apply_triage_rules(
 
     # ── TAIL END: Score-gated delivery ────────────────────────────────────
     # No hard rule fired — triage score decides.
-    if score >= p.deliver_threshold:
+    
+    # Scale thresholds based on signal. Better signal -> lower threshold -> more throughput.
+    # At 1.0 signal, threshold drops by 0.20. At 0.0 signal, shifts up by 0.10.
+    signal_shift = 0.10 - (features.signal_quality * 0.30)
+    
+    eff_deliver = max(0.10, min(0.95, p.deliver_threshold + signal_shift))
+    eff_defer   = max(0.05, min(0.90, p.defer_threshold + signal_shift))
+
+    if score >= eff_deliver:
         return _result(
             "DELIVER_IMMEDIATE",
-            f"Triage score {score:.3f} >= deliver threshold {p.deliver_threshold:.2f}.",
+            f"Score {score:.3f} >= dynamic deliver threshold {eff_deliver:.2f} (Base: {p.deliver_threshold}).",
             override=False,
             score=score,
             msg_id=message_id,
@@ -260,10 +281,10 @@ def apply_triage_rules(
             features=features,
         )
 
-    if score >= p.defer_threshold:
+    if score >= eff_defer:
         return _result(
             "DEFER_TO_ZONE",
-            f"Triage score {score:.3f} — deferred until good signal zone.",
+            f"Score {score:.3f} — deferred because below dynamic {eff_deliver:.2f}.",
             override=False,
             score=score,
             msg_id=message_id,
@@ -325,7 +346,7 @@ def triage_to_decision(action: str) -> Decision:
     Converts a TriageAction string to the legacy Decision used
     by the existing controller code that calls decide().
     """
-    deliver_set = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE",
+    deliver_set = {"DELIVER_IMMEDIATE", "WHITELIST_OVERRIDE", "KEYWORD_OVERRIDE",
                    "DELIVER_AUDIO_ONLY", "FALLBACK_VIBRATE", "FLUSH_DIGEST"}
     defer_set   = {"DEFER_TO_ZONE"}
     # HOLD_FOR_DIGEST → maps to defer in legacy terms

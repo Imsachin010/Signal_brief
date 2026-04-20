@@ -179,7 +179,7 @@ export default function HMIDisplay({ vehicle, snapshot, onStep, onGenerate, onFl
       <div className="triage-strip">
         <div className="triage-stat">
           <span className="triage-stat-val" style={{ color: "#22c55e" }}>{snapshot.queue.delivered_count}</span>
-          <span className="triage-stat-label">Delivered</span>
+          <span className="triage-stat-label">Received</span>
         </div>
         <div className="triage-stat">
           <span className="triage-stat-val" style={{ color: "#a78bfa" }}>{queueCount}</span>

@@ -15,12 +15,12 @@
   "dnd_windows": [
     [
       22,
-      7
+      0
     ]
   ],
   "driving_speed_threshold_kmh": 15.0,
   "defer_threshold": 0.45,
   "deliver_threshold": 0.65,
-  "dnd_active_now": true,
-  "current_hour_utc": 1
+  "dnd_active_now": false,
+  "current_hour_utc": 6
 }

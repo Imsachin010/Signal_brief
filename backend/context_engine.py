@@ -146,8 +146,9 @@ def _add_noise(base: float, noise_factor: float = 0.08) -> float:
 
 
 def _hour_of_day() -> int:
-    from datetime import datetime, timezone
-    return datetime.now(timezone.utc).hour
+    from datetime import datetime, timezone, timedelta
+    india_tz = timezone(timedelta(hours=5, minutes=30))
+    return datetime.now(india_tz).hour
 
 
 # ---- Context Engine ---------------------------------------------------------
